@@ -19,7 +19,7 @@ const {
   categoryUnList,
   getAddCategory,
   postEditCategory,
-} = require("../controllers/categorycontroller.js");
+} = require("../controllers/categoryController.js");
 
 const {
   getProductManagment,
