@@ -1,0 +1,1526 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Mirrored from maraviyainfotech.com/wrapbootstrap/masterkart-html/masterkart-html/checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Mar 2024 10:02:15 GMT -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+
+    <title>Cake Cart</title>
+    <meta
+      name="keywords"
+      content="Bootstrap 5.x, ecommerce, farming, food market, grocery market, grocery shop, grocery store, grocery supper market, multi vendor, organic food, supermarket, supermarket grocery"
+    />
+    <meta name="description" content="Multipurpose eCommerce HTML Template" />
+    <meta name="author" content="ashishmaraviya" />
+
+    <!-- site Favicon -->
+    <link rel="icon" href="assets/img/favicon/favicon.png" sizes="32x32" />
+
+    <!-- css Icon Font -->
+    <link rel="stylesheet" href="assets/css/vendor/msicons.min.css" />
+
+    <!-- jquery-validate -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js"
+      integrity="sha512-WMEKGZ7L5LWgaPeJtw9MBM4i5w5OSBlSjTjCtSnvFJGSVD26gE5+Td12qN5pvWXhuWaWcVwF++F7aqu9cvqP0A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/additional-methods.min.js"
+      integrity="sha512-TiQST7x/0aMjgVTcep29gi+q5Lk5gVTUPE9XgN0g96rwtjEjLpod4mlBRKWHeBcvGBAEvJBmfDqh2hfMMmg+5A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- sweetalert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- css All Plugins Files -->
+    <link rel="stylesheet" href="assets/css/plugins/animate.css" />
+    <link rel="stylesheet" href="assets/css/plugins/bootstrap.css" />
+    <link rel="stylesheet" href="assets/css/plugins/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/owl.carousel.min.css" />
+    <link
+      rel="stylesheet"
+      href="assets/css/plugins/owl.theme.default.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/plugins/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/slick.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/nouislider.css" />
+
+    <!-- Main Style -->
+    <link rel="stylesheet" id="main_style" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+  </head>
+
+  <body>
+    <!-- Loader -->
+    <div id="ms-overlay">
+      <div class="loader"></div>
+    </div>
+
+    <!-- Header start  -->
+    <header class="ms-header">
+      <!-- Header Top Start -->
+      <div class="header-top">
+        <div class="container">
+          <div class="row align-items-center">
+            <!-- Header Top social Start -->
+            <div class="col text-left header-top-left d-none d-lg-block">
+              <div class="header-top-social">
+                <ul class="mb-0">
+                  <li class="list-inline-item">
+                    <a href="javascript:void(0)"
+                      ><i class="msicon msi-phone"></i></a
+                    >+91 987 654 3210
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="javascript:void(0)"
+                      ><i class="msicon msi-whatsapp"></i></a
+                    >+91 987 654 3210
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Header Top social End -->
+            <!-- Header Top Message Start -->
+            <div class="col text-center header-top-center">
+              <div class="header-top-message">
+                World's Fastest Online Shopping Destination
+              </div>
+            </div>
+            <!-- Header Top Message End -->
+            <!-- Header Top Language Currency -->
+            <div class="col header-top-right d-none d-lg-block">
+              <div class="header-top-right-inner d-flex justify-content-end">
+                <!-- Language Start -->
+                <div class="header-top-lan-curr header-top-lan dropdown">
+                  <button class="dropdown-toggle" data-bs-toggle="dropdown">
+                    English
+                    <i class="msicon msi-angle-down" aria-hidden="true"></i>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li class="active">
+                      <a class="dropdown-item" href="#">English</a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Italiano</a></li>
+                  </ul>
+                </div>
+                <!-- Language End -->
+                <!-- Currency Start -->
+                <div class="header-top-lan-curr header-top-curr dropdown">
+                  <button class="dropdown-toggle" data-bs-toggle="dropdown">
+                    Dollar
+                    <i class="msicon msi-angle-down" aria-hidden="true"></i>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li class="active">
+                      <a class="dropdown-item" href="#">USD $</a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">EUR €</a></li>
+                  </ul>
+                </div>
+                <!-- Currency End -->
+                <a class="ms-help" href="faq.html">Help?</a>
+                <a class="ms-help" href="track-order.html">Track Order?</a>
+              </div>
+            </div>
+            <!-- Header Top Language Currency -->
+            <!-- Header Top responsive Action -->
+            <div class="col header-top-res d-lg-none">
+              <div class="ms-header-bottons">
+                <!-- Category Toggle -->
+                <div class="col ms-category-icon-block">
+                  <div class="ms-category-menu">
+                    <div class="ms-category-toggle">
+                      <img
+                        src="assets/img/icons/category-icon.svg"
+                        class="svg_img header_svg svg_cat"
+                        alt="icon"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="right-icons">
+                  <!-- Header User Start -->
+                  <a href="login.html" class="ms-header-btn ms-header-user">
+                    <div class="header-icon">
+                      <img
+                        src="assets/img/icons/user.svg"
+                        class="svg_img header_svg"
+                        alt=""
+                      />
+                    </div>
+                  </a>
+                  <!-- Header User End -->
+                  <!-- Header Wishlist Start -->
+                  <a
+                    href="javascript:void(0)"
+                    class="ms-header-btn ms-wish-toggle"
+                  >
+                    <div class="header-icon">
+                      <img
+                        src="assets/img/icons/wishlist.svg"
+                        class="svg_img header_svg"
+                        alt=""
+                      />
+                    </div>
+                    <span class="ms-header-count ms-wishlist-count">3</span>
+                  </a>
+                  <!-- Header Wishlist End -->
+                  <!-- Header Cart Start -->
+                  <a
+                    href="javascript:void(0)"
+                    class="ms-header-btn ms-cart-toggle"
+                  >
+                    <div class="header-icon">
+                      <img
+                        src="assets/img/icons/pro_cart.svg"
+                        class="svg_img header_svg"
+                        alt=""
+                      />
+                      <span class="main-label-note-new"></span>
+                    </div>
+                    <span class="ms-header-count ms-cart-count">3</span>
+                  </a>
+                  <!-- Header Cart End -->
+                </div>
+              </div>
+            </div>
+            <!-- Header Top responsive Action -->
+          </div>
+        </div>
+      </div>
+      <!-- Header Top  End -->
+
+      <!-- Header Bottom  Start -->
+      <div class="ms-header-bottom d-none d-lg-block">
+        <div class="container position-relative">
+          <div class="row">
+            <div class="ms-flex">
+              <!-- Header Logo Start -->
+              <div class="align-self-center ms-header-logo">
+                <div class="header-logo">
+                  <a href="index-2.html"
+                    ><img src="assets/img/logo/logo.png" alt="Site Logo"
+                  /></a>
+                </div>
+              </div>
+              <!-- Header Logo End -->
+
+              <!-- Header Button Start -->
+              <div class="align-self-center">
+                <div class="ms-header-bottons">
+                  <!-- Header User Start -->
+                  <% if(islogin==true){ %>
+                  <div class="ms-acc-drop">
+                    <a
+                      href="javascript:void(0)"
+                      class="ms-header-btn ms-header-user dropdown-toggle ms-user-toggle"
+                      title="Account"
+                    >
+                      <div class="header-icon">
+                        <img
+                          src="assets/img/icons/user.svg"
+                          class="svg_img header_svg"
+                          alt=""
+                        />
+                      </div>
+                      <div class="ms-btn-desc">
+                        <span class="ms-btn-title">Account</span>
+                        <span class="ms-btn-stitle">Log-Out</span>
+                      </div>
+                    </a>
+                    <ul class="ms-dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="/myAccount"
+                          >My Account</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/views/users/logout"
+                          >Log-Out</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+
+                  <% }else{ %>
+                  <div class="ms-acc-drop">
+                    <a
+                      href="javascript:void(0)"
+                      class="ms-header-btn ms-header-user dropdown-toggle ms-user-toggle"
+                      title="Account"
+                    >
+                      <div class="header-icon">
+                        <img
+                          src="assets/img/icons/user.svg"
+                          class="svg_img header_svg"
+                          alt=""
+                        />
+                      </div>
+                      <div class="ms-btn-desc">
+                        <span class="ms-btn-title">Account</span>
+                        <span class="ms-btn-stitle">Login</span>
+                      </div>
+                    </a>
+                    <ul class="ms-dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="/signup">Signup</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/views/users/login"
+                          >Login</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <% } %>
+                  <!-- Header User End -->
+                  <!-- Header wishlist Start -->
+                  <a
+                    href="javascript:void(0)"
+                    class="ms-header-btn ms-wish-toggle"
+                    title="Wishlist"
+                  >
+                    <div class="header-icon">
+                      <img
+                        src="assets/img/icons/wishlist.svg"
+                        class="svg_img header_svg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="ms-btn-desc">
+                      <span class="ms-btn-title">Wishlist</span>
+                      <span class="ms-btn-stitle"
+                        ><b class="ms-wishlist-count">3</b>-items</span
+                      >
+                    </div>
+                  </a>
+                  <!-- Header wishlist End -->
+                  <!-- Header Cart Start -->
+                  <a
+                    href="javascript:void(0)"
+                    class="ms-header-btn ms-cart-toggle"
+                    title="Cart"
+                  >
+                    <div class="header-icon">
+                      <img
+                        src="assets/img/icons/cart_5.svg"
+                        class="svg_img header_svg"
+                        alt=""
+                      />
+                      <span class="main-label-note-new"></span>
+                    </div>
+                    <div class="ms-btn-desc">
+                      <span class="ms-btn-title">Cart</span>
+                      <span class="ms-btn-stitle"
+                        ><b class="ms-cart-count">3</b>-items</span
+                      >
+                    </div>
+                  </a>
+                  <!-- Header Cart End -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Header Button End -->
+
+      <!-- Header menu -->
+      <div class="ms-header-cat d-none d-lg-block">
+        <div class="container position-relative">
+          <div class="row justify-content-between">
+            <!-- Category Toggle -->
+            <div class="col ms-category-icon-block">
+              <div class="ms-category-menu">
+                <div class="ms-category-toggle">
+                  <img
+                    src="assets/img/icons/category-icon.svg"
+                    class="svg_img header_svg svg_cat"
+                    alt="icon"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Main Menu Start -->
+            <div id="ms-main-menu-desk" class="d-none d-lg-block sticky-nav">
+              <div class="position-relative nav-desk">
+                <div class="row">
+                  <div class="col-md-12 align-self-center">
+                    <div class="ms-main-menu">
+                      <ul>
+                        <li class="non-drop"><a href="/">Home</a></li>
+                        <li class="dropdown drop-list">
+                          <a href="/products">Products</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Main Menu End -->
+
+            <div class="col ms-location-block">
+              <div class="ms-location-menu">
+                <div class="ms-location-toggle">
+                  <img
+                    src="assets/img/icons/location.svg"
+                    class="svg_img header_svg svg_loc"
+                    alt="icon"
+                  />
+                  <span
+                    class="ms-location-title d-1199 ms-location"
+                    id="ms_location"
+                  ></span>
+                  <i
+                    class="msicon msi-angle-down d-1199"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+                <div class="ms-location-content">
+                  <div class="ms-location-dropdown">
+                    <div class="row ms-location-wrapper">
+                      <ul class="loc-grid">
+                        <li class="loc-list current">
+                          <img
+                            src="assets/img/icons/location.svg"
+                            class="svg_img header_svg svg_loc"
+                            alt="icon"
+                          /><span class="ms-detail-current"
+                            >current Location</span
+                          >
+                        </li>
+                        <li class="loc-list">
+                          <img
+                            src="assets/img/icons/location.svg"
+                            class="svg_img header_svg svg_loc"
+                            alt="icon"
+                          /><span class="ms-detail">rajkot, in</span>
+                        </li>
+                        <li class="loc-list">
+                          <img
+                            src="assets/img/icons/location.svg"
+                            class="svg_img header_svg svg_loc"
+                            alt="icon"
+                          /><span class="ms-detail">Mountain View, us</span>
+                        </li>
+                        <li class="loc-list">
+                          <img
+                            src="assets/img/icons/location.svg"
+                            class="svg_img header_svg svg_loc"
+                            alt="icon"
+                          /><span class="ms-detail">Birmingham, UK</span>
+                        </li>
+                        <li class="loc-list">
+                          <img
+                            src="assets/img/icons/location.svg"
+                            class="svg_img header_svg svg_loc"
+                            alt="icon"
+                          /><span class="ms-detail">Jakarta, id</span>
+                        </li>
+                        <li class="loc-list">
+                          <img
+                            src="assets/img/icons/location.svg"
+                            class="svg_img header_svg svg_loc"
+                            alt="icon"
+                          /><span class="ms-detail">lima, pe</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Header menu End -->
+
+      <!-- Header responsive Bottom  Start -->
+      <div class="ms-header-bottom d-lg-none">
+        <div class="container position-relative">
+          <div class="row">
+            <div class="ms-flex">
+              <!-- Header Logo Start -->
+              <div class="col ms-header-logo">
+                <div class="header-logo">
+                  <a href="index-2.html">
+                    <img src="assets/img/logo/logo.png" alt="Site Logo" />
+                  </a>
+                </div>
+              </div>
+              <!-- Header Logo End -->
+              <!-- Header menu Start -->
+              <a
+                href="javascript:void(0)"
+                class="ms-header-btn ms-site-menu-icon d-lg-none"
+              >
+                <img
+                  src="assets/img/icons/menu.svg"
+                  class="svg_img"
+                  alt="menu"
+                />
+              </a>
+              <!-- Header menu End -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Header responsive Bottom  End -->
+    </header>
+    <!-- Header End  -->
+
+    <!-- Breadcrumb start -->
+    <div class="ms-breadcrumb m-b-30">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="row ms_breadcrumb_inner">
+              <div class="col-md-6 col-sm-12">
+                <h2 class="ms-breadcrumb-title">Checkout</h2>
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <!-- ms-breadcrumb-list start -->
+                <ul class="ms-breadcrumb-list">
+                  <li class="ms-breadcrumb-item"><a href="/">Home</a></li>
+                  <li class="ms-breadcrumb-item"><a href="/cart">Cart</a></li>
+                  <li class="ms-breadcrumb-item active">Checkout</li>
+                </ul>
+                <!-- ms-breadcrumb-list end -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Breadcrumb end -->
+
+    <!-- add address -->
+    <style>
+      .button-link {
+        display: inline-block;
+        padding: 10px 20px;
+        border: 1px solid #4caf50;
+        border-radius: 5px;
+        background-color: #4bdf1a;
+      }
+    </style>
+
+    <a href="/addAddress"><button class="button-link">Add Address</button></a>
+    <!-- add address end -->
+    <style>
+      .select-btn {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.2s ease-in-out;
+      }
+
+      .select-btn:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+      }
+    </style>
+    <style>
+      .address-box {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 20px;
+      }
+      .address-btn {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+      }
+      .address-form {
+        margin-top: 10px;
+      }
+    </style>
+
+    <!-- Checkout section -->
+    <section class="ms-checkout-section padding-tb-30">
+      <form id="orderItems">
+        <h2 class="d-none">Checkout Page</h2>
+        <div class="container">
+          <div class="row">
+            <div class="ms-checkout-leftside col-lg-8 col-md-12">
+              <!-- checkout content Start -->
+              <div class="ms-checkout-content">
+                <div class="ms-checkout-inner">
+                  <div class="ms-checkout-wrap m-b-30 padding-bottom-3">
+                    <div class="ms-checkout-block ms-check-bill">
+                      <h3 class="ms-checkout-title">Billing Details</h3>
+                      <div class="ms-bl-block-content">
+                        <div class="ms-check-subtitle">Checkout Options</div>
+                        <div class="address-box">
+                          <div style="display: flex; margin-left: 20px">
+                            <% locationData.forEach((address, i) => { %>
+                            <div
+                              class="user-box"
+                              style="
+                                margin: 20px;
+                                border: 1px solid #ccc;
+                                padding: 10px;
+                              "
+                            >
+                              <div class="user-details">
+                                <h3>Address:<%= i + 1 %></h3>
+                                <p>
+                                  <strong>Name:</strong> <%= address.firstName
+                                  %> <%= address.lastName %>
+                                </p>
+                                <p>
+                                  <strong>Line 1:</strong> <%=
+                                  address.addressLine1 %>
+                                </p>
+                                <p>
+                                  <strong>Line 2:</strong> <%=
+                                  address.addressLine2 %>
+                                </p>
+                                <p>
+                                  <strong>Phone Number:</strong> <%=
+                                  address.phone %>
+                                </p>
+                              </div>
+                              <input
+                                type="radio"
+                                id="radio_<%=address._id%>"
+                                name="selectedAddress"
+                                value="<%=address._id%>"
+                              />
+                              <label for="radio_<%=address._id%>">Select</label>
+                            </div>
+                            <% }) %>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <% if(locationData.length>0){ %>
+                  <button type="submit">Place Order</button>
+                  <span class="ms-check-order-btn"> </span>
+                  <% } %>
+                </div>
+              </div>
+              <!--cart content End -->
+            </div>
+            <!-- Sidebar Area Start -->
+            <div class="ms-checkout-rightside col-lg-4 col-md-12 m-t-991">
+              <div class="ms-sidebar-wrap">
+                <!-- Sidebar Summary Block -->
+                <div class="ms-sidebar-block">
+                  <div class="ms-sb-title">
+                    <h3 class="ms-sidebar-title">Summary</h3>
+                  </div>
+                  <div class="ms-sb-block-content">
+                    <div class="ms-checkout-summary">
+                      <div>
+                        <span class="text-left">Sub-Total</span>
+                        <span class="text-right">₹<%=grandTotal%></span>
+                      </div>
+                      <div>
+                        <span class="text-left">Delivery Charges</span>
+                        <span class="text-right">₹0.00</span>
+                      </div>
+                      <div>
+                        <span class="text-left">Coupon Discount</span>
+                        <span class="text-right">
+                          <a class="ms-checkout-coupan" id="showCoupons"
+                            >Apply Coupon</a
+                          >
+                        </span>
+                      </div>
+                      <div class="ms-checkout-coupan-content">
+                        <form
+                          class="ms-checkout-coupan-form"
+                          name="ms-checkout-coupan-form"
+                          id="couponChecker"
+                        >
+                          <input
+                            class="ms-coupan"
+                            id="appliedCoupon"
+                            type="text"
+                            required=""
+                            placeholder="Enter Your Coupon Code"
+                            name="couponCode"
+                          />
+                          <button
+                            class="ms-coupan-btn ms-btn-2"
+                            type="button"
+                            name="subscribe"
+                            id="applyCouponBtn"
+                            onclick="applyCoupon()"
+                          >
+                            Apply
+                          </button>
+                          <button
+                            class="ms-coupan-btn ms-btn-2"
+                            type="button"
+                            id="removeCouponBtn"
+                            style="display: none"
+                            onclick="removeCoupon()"
+                          >
+                            Remove
+                          </button>
+                        </form>
+                      </div>
+
+                      <div class="ms-available-coupons" style="display: none">
+                        <h4 class="text-left">Available Coupons:</h4>
+                        <ul>
+                          <% for(let i = 0; i < validCoupons.length; i++) { %>
+                          <li>
+                            <%=i+1%>.
+                            <span
+                              class="text-right coupon-code"
+                              data-coupon-id="<%=validCoupons[i]%>"
+                              onclick="showDetails('<%=validCoupons[i].discountPercentage%>', '<%=validCoupons[i].minimumPurchase%>', '<%=grandTotal%>')"
+                            >
+                              <%=validCoupons[i].couponCode%>
+                            </span>
+                          </li>
+                          <p class="text-left">
+                            you need to Purchase for minimum of
+                            $<%=validCoupons[i].minimumPurchase%>
+                          </p>
+                          <% } %>
+                        </ul>
+                      </div>
+
+                      <div class="ms-checkout-summary-total">
+                        <span class="text-left">Total Amount </span>
+                        <span
+                          class="text-right"
+                          id="presentGrandTotal"
+                          value="<%= grandTotal %>"
+                          ><%=grandTotal%></span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <script>
+                  document
+                    .getElementById("showCoupons")
+                    .addEventListener("click", function () {
+                      var coupons = document.querySelector(
+                        ".ms-available-coupons"
+                      );
+                      coupons.style.display =
+                        coupons.style.display === "block" ? "none" : "block";
+                    });
+                </script>
+                <!-- Sidebar Summary Block -->
+              </div>
+              <div class="ms-sidebar-wrap ms-checkout-pay-wrap">
+                <!-- Sidebar Payment Block -->
+                <div class="ms-sidebar-block">
+                  <div class="ms-sb-title">
+                    <h3 class="ms-sidebar-title">Payment Method</h3>
+                  </div>
+                  <div class="ms-sb-block-content">
+                    <div class="ms-checkout-pay">
+                      <div class="ms-pay-desc">
+                        Please select the preferred payment method to use on
+                        this order.
+                      </div>
+                      <% if(grandTotal<1000){ %>
+                      <span class="ms-pay-option">
+                        <span>
+                          <input
+                            type="radio"
+                            id="pay1"
+                            name="paymentMethod"
+                            value="COD"
+                            disabled = "true"
+                          />
+                          <label for="pay1" onclick="overRated()">Cash On Delivery</label>
+                        </span>
+                        <% }else{ %>
+                          <span class="ms-pay-option">
+                            <span>
+                              <input
+                                type="radio"
+                                id="pay1"
+                                name="paymentMethod"
+                                value="COD"
+                              />
+                              <label for="pay1">Cash On Delivery</label>
+                            </span>
+                          <% } %>
+                        <span>
+                          <input
+                            type="radio"
+                            id="pay2"
+                            name="paymentMethod"
+                            value="payPal"
+                          />
+                          <label for="pay2">PayPal</label>
+                        </span>
+                        <span>
+                          <input
+                            type="radio"
+                            id="pay3"
+                            name="paymentMethod"
+                            value="wallet"
+                            onclick="walletBalanceChecker()"
+                          />
+                          <label for="pay3">Wallet</label>
+                        </span>
+                      </span>
+                      <span class="ms-pay-commemt">
+                        <span class="ms-pay-opt-head"
+                          >Add Comments About Your Order</span
+                        >
+                        <textarea
+                          name="Comments"
+                          placeholder="Comments"
+                        ></textarea>
+                      </span>
+                      <span class="ms-pay-agree">
+                        <input type="checkbox" id="agree" />
+                        <label for="agree">
+                          I have read and agree to the
+                          <span>Terms & Conditions.</span>
+                        </label>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Sidebar Payment Block -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+    <script>
+      async function walletBalanceChecker() {
+        try {
+          console.log(
+            "calling this walletBalanceChecker function",
+            `<%= walletData %>`
+          );
+          let walletDetailsString = `<%= JSON.stringify(walletData) %>`;
+          console.log(walletDetailsString);
+          let decodedWalletDetailsString = walletDetailsString
+            .replace(/&quot;/g, '"')
+            .replace(/&#34;/g, '"');
+          let walletDetails = JSON.parse(decodedWalletDetailsString);
+
+          console.log("thi sis  wallet details", walletDetails);
+          let availableBalance = walletDetails.walletBalance;
+          let currGrandTotal = Number(
+            document.getElementById("presentGrandTotal").innerText
+          );
+
+          if (availableBalance >= currGrandTotal) {
+            await Swal.fire({
+              title: `Your Wallet Balance is :${availableBalance}`,
+              text: `You can now purchase with your wallet Balance`,
+              icon: "info",
+            });
+          }else{
+            await Swal.fire({
+              title: `Your Wallet Balance is :${availableBalance}`,
+              text: `Your wallet balance is not sufficient`,
+              icon: "warning",
+            });
+          }
+        } catch (error) {
+          console.log(error);
+        }
+      }
+
+      $("#orderItems").validate({
+        submitHandler: async (form, event) => {
+          event.preventDefault();
+          // Create a new FormData object
+          // const formData = new FormData(form);
+          // console.log(form);
+          const grandTotal =
+            document.getElementById("presentGrandTotal").innerText;
+          console.log("this while submitting form", grandTotal);
+          console.log(form);
+          let obj = {
+            address: form.selectedAddress.value,
+            paymentMethod: form.paymentMethod.value,
+            presentTotal: grandTotal,
+            comments: form.Comments.value,
+            couponOffers: appliedCoupon,
+          };
+          console.log(appliedCoupon);
+          console.log(obj);
+          if (form.paymentMethod.value == "payPal") {
+            let response = await fetch(`/payPalPayment/?total=${grandTotal}`, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(obj),
+            });
+
+            let data = await response.json();
+
+            if (data.url) {
+              window.location.href = data.url;
+            }
+          } else if (form.paymentMethod.value == "COD") {
+            console.log("coming here because COD");
+            let response = await fetch("/orderPlaced", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(obj),
+            });
+            let result = await response.json();
+            console.log(
+              "this is the result getting from the fetch method",
+              result
+            );
+
+            if (result.success) {
+              console.log("coming here");
+              window.location.href = `/orderinfo?islogin=${result.islogin}&presentOrder=${result.presentOrder}`;
+            }
+          }else if(form.paymentMethod.value=="wallet"){
+            console.log("coming here because of Wallet")
+            let response = await fetch("/orderPlaced",{
+              method:"POST",
+              headers:{"Content-Type": "application/json"},
+              body:JSON.stringify(obj),
+            });
+
+            let result = await response.json();
+            if(result.inSufficient){
+              await Swal.fire({
+              title: `wallet Payment failed`,
+              text: `Your wallet balance is not sufficient`,
+              icon: "warning",
+            });
+            }else if(result.succuess){
+              console.log("coming here beacause the wallet payment done");
+              window.location.href = `/orderinfo?islogin=${result.islogin}&presentOrder=${result.presentOrder}`;
+            }
+          }
+        },
+      });
+
+      async function overRated(){
+        console.log("Calling this overRated function")
+        return  Swal.fire({
+              title: `COD is not available`,
+              text: `You total amount is not eligible for COD`,
+              icon: "warning",
+            });
+      }
+    </script>
+    <!-- Checkout section End -->
+
+    <!-- Footer Start -->
+    <footer class="ms-footer m-t-30">
+      <div class="footer-container">
+        <div class="footer-top padding-tb-60">
+          <div class="container">
+            <div class="row m-minus-991">
+              <div class="col-sm-12 col-lg-3 ms-footer-cat">
+                <div class="ms-footer-widget ms-footer-company">
+                  <img
+                    src="assets/img/logo/footer-logo.png"
+                    class="ms-footer-logo"
+                    alt="footer logo"
+                  />
+                  <p class="ms-footer-detail">
+                    Masterkart is the biggest market of grocery products. Get
+                    your daily needs from our store.
+                  </p>
+                  <div class="ms-app-store">
+                    <a href="#" class="app-img"
+                      ><img
+                        src="assets/img/app/android.png"
+                        class="adroid"
+                        alt="apple"
+                    /></a>
+                    <a href="#" class="app-img"
+                      ><img
+                        src="assets/img/app/apple.png"
+                        class="apple"
+                        alt="apple"
+                    /></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-2 ms-footer-info">
+                <div class="ms-footer-widget">
+                  <h4 class="ms-footer-heading">Category</h4>
+                  <div class="ms-footer-links ms-footer-dropdown">
+                    <ul class="align-items-center">
+                      <li class="ms-footer-link">
+                        <a href="shop-left-sidebar-col-3.html">Dairy & Milk</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="shop-banner-left-sidebar-col-3.html"
+                          >Snack & Spice</a
+                        >
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="shop-full-width-col-5.html">Fast Food</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="shop-list-left-sidebar.html">Juice & Drinks</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="shop-list-full-col-2.html">Bakery</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="shop-banner-right-sidebar-col-4.html"
+                          >Seafood</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-2 ms-footer-account">
+                <div class="ms-footer-widget">
+                  <h4 class="ms-footer-heading">Company</h4>
+                  <div class="ms-footer-links ms-footer-dropdown">
+                    <ul class="align-items-center">
+                      <li class="ms-footer-link">
+                        <a href="about-us.html">About us</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="track-order.html">Delivery</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="privacy-policy.html">Legal Notice</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="terms-condition.html">Terms & conditions</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="checkout.html">Secure payment</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="contact-us.html">Contact us</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-2 ms-footer-service">
+                <div class="ms-footer-widget">
+                  <h4 class="ms-footer-heading">Account</h4>
+                  <div class="ms-footer-links ms-footer-dropdown">
+                    <ul class="align-items-center">
+                      <li class="ms-footer-link">
+                        <a href="register.html">Sign In</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="cart.html">View Cart</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="privacy-policy.html">Return Policy</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="#">Become a Vendor</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="#">Affiliate Program</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="checkout.html">Payments</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-3 ms-footer-cont-social">
+                <div class="ms-footer-contact">
+                  <div class="ms-footer-widget">
+                    <h4 class="ms-footer-heading">Contact</h4>
+                    <div class="ms-footer-links ms-footer-dropdown">
+                      <ul class="align-items-center">
+                        <li class="ms-footer-link ms-foo-location">
+                          <span
+                            ><img
+                              src="assets/img/icons/foo-location.svg"
+                              class="svg_img foo_svg"
+                              alt=""
+                          /></span>
+                          <p>
+                            2548 Broaddus Maple Court, Madisonville KY 4783,
+                            USA.
+                          </p>
+                        </li>
+                        <li class="ms-footer-link ms-foo-call">
+                          <span
+                            ><img
+                              src="assets/img/icons/foo-wp.svg"
+                              class="svg_img foo_svg"
+                              alt="" /></span
+                          ><a href="tel:+009876543210">+00 9876543210</a>
+                        </li>
+                        <li class="ms-footer-link ms-foo-mail">
+                          <span
+                            ><img
+                              src="assets/img/icons/foo-mail.svg"
+                              class="svg_img foo_svg"
+                              alt="" /></span
+                          ><a href="mailto:example@email.com"
+                            >example@email.com</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="ms-footer-social">
+                  <div class="ms-footer-widget">
+                    <div class="ms-footer-links ms-footer-dropdown">
+                      <ul class="align-items-center">
+                        <li class="ms-footer-link">
+                          <a href="#"
+                            ><i
+                              class="msicon msi-instagram"
+                              aria-hidden="true"
+                            ></i
+                          ></a>
+                        </li>
+                        <li class="ms-footer-link">
+                          <a href="#"
+                            ><i
+                              class="msicon msi-twitter-square"
+                              aria-hidden="true"
+                            ></i
+                          ></a>
+                        </li>
+                        <li class="ms-footer-link">
+                          <a href="#"
+                            ><i
+                              class="msicon msi-facebook-square"
+                              aria-hidden="true"
+                            ></i
+                          ></a>
+                        </li>
+                        <li class="ms-footer-link">
+                          <a href="#"
+                            ><i
+                              class="msicon msi-linkedin-square"
+                              aria-hidden="true"
+                            ></i
+                          ></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="container">
+            <div class="row">
+              <div class="ms-bottom-info">
+                <!-- Footer Copyright Start -->
+                <div class="footer-copy">
+                  <div class="footer-bottom-copy">
+                    <div class="ms-copy">
+                      Copyright ©
+                      <a class="site-name" href="index-2.html">Masterkart</a>
+                      all rights reserved. Powered by Masterkart.
+                    </div>
+                  </div>
+                </div>
+                <!-- Footer Copyright End -->
+                <!-- Footer payment -->
+                <div class="footer-bottom-right">
+                  <div
+                    class="footer-bottom-payment d-flex justify-content-center"
+                  >
+                    <div class="payment-link">
+                      <img src="assets/img/hero-bg/payment.png" alt="payment" />
+                    </div>
+                  </div>
+                </div>
+                <!-- Footer payment -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Area End -->
+
+    <!-- Quickview Modal -->
+    <div
+      class="modal fade quickview-modal"
+      id="ms_quickview_modal"
+      tabindex="-1"
+      role="dialog"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <button
+            type="button"
+            class="btn-close qty_close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-5 col-sm-12 col-xs-12">
+                <div class="qty-product-cover">
+                  <div class="qty-slide">
+                    <img
+                      class="img-responsive"
+                      src="assets/img/product-images/1_1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="qty-slide">
+                    <img
+                      class="img-responsive"
+                      src="assets/img/product-images/2_1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="qty-slide">
+                    <img
+                      class="img-responsive"
+                      src="assets/img/product-images/3_1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="qty-slide">
+                    <img
+                      class="img-responsive"
+                      src="assets/img/product-images/4_1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="qty-slide">
+                    <img
+                      class="img-responsive"
+                      src="assets/img/product-images/5_1.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="qty-nav-thumb">
+                  <div class="qty-slide">
+                    <img
+                      class="img-responsive"
+                      src="assets/img/product-images/1_1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="qty-slide">
+                    <img
+                      class="img-responsive"
+                      src="assets/img/product-images/2_1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="qty-slide">
+                    <img
+                      class="img-responsive"
+                      src="assets/img/product-images/3_1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="qty-slide">
+                    <img
+                      class="img-responsive"
+                      src="assets/img/product-images/4_1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="qty-slide">
+                    <img
+                      class="img-responsive"
+                      src="assets/img/product-images/5_1.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-7 col-sm-12 col-xs-12">
+                <div class="quickview-pro-content">
+                  <h5 class="ms-quick-title">
+                    <a href="product-left-sidebar.html"
+                      >premium quality organic trail mix dried fruit pack</a
+                    >
+                  </h5>
+                  <div class="ms-quickview-rating">
+                    <i class="msicon msi-star fill"></i>
+                    <i class="msicon msi-star fill"></i>
+                    <i class="msicon msi-star fill"></i>
+                    <i class="msicon msi-star fill"></i>
+                    <i class="msicon msi-star"></i>
+                  </div>
+
+                  <div class="ms-quickview-desc">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s,
+                  </div>
+                  <div class="ms-quickview-price">
+                    <span class="new-price">$150.00</span>
+                    <span class="old-price">$200.00</span>
+                  </div>
+
+                  <div class="ms-pro-variation">
+                    <div
+                      class="ms-pro-variation-inner ms-pro-variation-size ms-pro-size"
+                    >
+                      <span>Size</span>
+                      <div class="ms-pro-variation-content">
+                        <ul class="ms-opt-size">
+                          <li class="active">
+                            <a
+                              href="javascript:void(0)"
+                              class="ms-opt-sz"
+                              data-tooltip="Small"
+                              >250g</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="javascript:void(0)"
+                              class="ms-opt-sz"
+                              data-tooltip="Medium"
+                              >500g</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="javascript:void(0)"
+                              class="ms-opt-sz"
+                              data-tooltip="Large"
+                              >1kg</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="javascript:void(0)"
+                              class="ms-opt-sz"
+                              data-tooltip="Extra Large"
+                              >2kg</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="ms-quickview-qty">
+                    <div class="qty-plus-minus">
+                      <input
+                        class="qty-input"
+                        type="text"
+                        name="ms_qtybtn"
+                        value="1"
+                      />
+                    </div>
+                    <div class="ms-quickview-cart">
+                      <button class="ms-btn-3">
+                        <img
+                          src="assets/img/icons/pro_cart.svg"
+                          class="svg_img pro_svg"
+                          alt=""
+                        />
+                        Add To Cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Quickview Modal end -->
+
+    <!-- Add to Cart Notify -->
+    <div class="ms-cart-notify">
+      <a href="javascript:void(0)" class="ms-cart-toggle"
+        ><img
+          src="assets/img/icons/pro_cart.svg"
+          class="svg_img"
+          alt="cart"
+        /><span>3</span></a
+      >
+    </div>
+
+    <!-- Add to Wishlist Notify  -->
+    <div class="ms-wish-notify"></div>
+
+    <!-- Add to Compare list Notify  -->
+    <div class="ms-compare-notify"></div>
+
+    <!-- Back to top  -->
+    <a class="ms-back-to-top"></a>
+
+    <!-- Features sidebar  -->
+    <div class="ms-features-sidebar-overlay"></div>
+    <div class="ms-features-sidebar">
+      <div class="tool-title">
+        <h3>Features</h3>
+      </div>
+      <a href="#" class="ms-tools-sidebar-toggle open-features">
+        <img alt="icon" src="assets/img/icons/setting.svg" class="svg_img" />
+      </a>
+      <div class="ms-features-block">
+        <div class="ms-features-title">Colors</div>
+        <ul class="bg-panel ms-change-color">
+          <li class="active" data-color="01">
+            <a href="javascript:void(0)" class="colorcode1"></a>
+          </li>
+          <li data-color="02">
+            <a href="javascript:void(0)" class="colorcode2"></a>
+          </li>
+          <li data-color="03">
+            <a href="javascript:void(0)" class="colorcode3"></a>
+          </li>
+          <li data-color="04">
+            <a href="javascript:void(0)" class="colorcode4"></a>
+          </li>
+          <li data-color="05">
+            <a href="javascript:void(0)" class="colorcode5"></a>
+          </li>
+          <li data-color="06">
+            <a href="javascript:void(0)" class="colorcode6"></a>
+          </li>
+          <li data-color="07">
+            <a href="javascript:void(0)" class="colorcode7"></a>
+          </li>
+          <li data-color="08">
+            <a href="javascript:void(0)" class="colorcode8"></a>
+          </li>
+          <li data-color="09">
+            <a href="javascript:void(0)" class="colorcode9"></a>
+          </li>
+        </ul>
+      </div>
+      <div class="ms-features-block">
+        <div class="ms-tools-sidebar-content">
+          <div class="ms-features-title">Dark mode</div>
+          <div class="ms-change-mode" id="ms-change-mode">
+            <div class="ms-mode-switch">
+              <div class="ms-mode-btn">Mode</div>
+              <div class="ms-mode-on">On</div>
+              <div class="ms-mode-off">Off</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plugins JS -->
+    <script src="assets/js/plugins/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/plugins/popper.min.js"></script>
+    <script src="assets/js/plugins/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/plugins/bootstrap-select.min.js"></script>
+    <script src="assets/js/plugins/fontawesome.js"></script>
+    <script src="assets/js/plugins/owl.carousel.min.js"></script>
+    <script src="assets/js/plugins/swiper-bundle.min.js"></script>
+    <script src="assets/js/plugins/infiniteslidev2.js"></script>
+    <script src="assets/js/plugins/jquery.zoom.min.js"></script>
+    <script src="assets/js/plugins/slick.min.js"></script>
+    <script src="assets/js/plugins/nouislider.js"></script>
+
+    <!-- Main Js -->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+      var appliedCoupon;
+      async function showDetails(percentage, minimumPurchase, grandTotal) {
+        try {
+          if (grandTotal > minimumPurchase) {
+            await Swal.fire({
+              title: "Info",
+              text: `With this Coupon you will get ${percentage}% off`,
+              icon: "info",
+            });
+          } else {
+            await Swal.fire({
+              title: "Not Available",
+              text: "You are not eligible for this coupon",
+              icon: "warning",
+            });
+          }
+        } catch (error) {
+          console.log("something went wrong", error);
+        }
+      }
+
+      async function applyCoupon() {
+        const couponCode = document.getElementById("appliedCoupon").value;
+        let obj = {
+          couponCode: couponCode,
+        };
+        let response = await fetch("/applyCoupon", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(obj),
+        });
+
+        let result = await response.json();
+        console.log("this is the result data from fetch", result);
+        console.log(result.coupData.discountPercentage);
+
+        if (result) {
+          document.getElementById("applyCouponBtn").disabled = true;
+          document.getElementById("removeCouponBtn").style.display =
+            "inline-block";
+          let maximumDiscount = result.coupData.maximumDiscount;
+          let currPercentage = result.coupData.discountPercentage;
+          let grandTotal =
+            document.getElementById("presentGrandTotal").innerText;
+          console.log(grandTotal);
+          let discountAmount = (grandTotal * currPercentage) / 100;
+          console.log(discountAmount);
+          if (discountAmount > maximumDiscount) {
+            discountAmount = maximumDiscount;
+          }
+
+          grandTotal = grandTotal - discountAmount;
+          console.log(grandTotal);
+          document.getElementById(
+            "presentGrandTotal"
+          ).innerText = `${grandTotal}`;
+          appliedCoupon = result.coupData._id;
+          console.log(grandTotal);
+        }
+      }
+
+      async function removeCoupon() {
+        await Swal.fire({
+          title: "Coupon Removed",
+          text: `Your coupon has been removed`,
+          icon: "warning",
+        });
+        document.getElementById("applyCouponBtn").disabled = false;
+        document.getElementById("removeCouponBtn").style.display = "none";
+        document.getElementById("appliedCoupon").value = "";
+        window.location.reload();
+      }
+    </script>
+  </body>
+
+  <!-- Mirrored from maraviyainfotech.com/wrapbootstrap/masterkart-html/masterkart-html/checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Mar 2024 10:02:15 GMT -->
+</html>

@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Cake Cart</title>
+    <meta name="description" content="Cake Cart" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- <link rel="apple-touch-icon" href="https://i.imgur.com/QRAUqs9.png"> -->
+    <!-- <link rel="shortcut icon" href="https://i.imgur.com/QRAUqs9.png"> -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.0/css/flag-icon.min.css"
+    />
+    <link rel="stylesheet" href="assets1/css/cs-skin-elastic.css" />
+    <link rel="stylesheet" href="assets1/css/style.css" />
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
+
+    <!-- cdn for font awsome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/chartist@0.11.0/dist/chartist.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/jqvmap@1.5.1/dist/jqvmap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/weathericons@2.1.0/css/weather-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js"
+      integrity="sha512-WMEKGZ7L5LWgaPeJtw9MBM4i5w5OSBlSjTjCtSnvFJGSVD26gE5+Td12qN5pvWXhuWaWcVwF++F7aqu9cvqP0A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/additional-methods.min.js"
+      integrity="sha512-TiQST7x/0aMjgVTcep29gi+q5Lk5gVTUPE9XgN0g96rwtjEjLpod4mlBRKWHeBcvGBAEvJBmfDqh2hfMMmg+5A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      #weatherWidget .currentDesc {
+        color: #ffffff !important;
+      }
+      .traffic-chart {
+        min-height: 335px;
+      }
+      #flotPie1 {
+        height: 150px;
+      }
+      #flotPie1 td {
+        padding: 3px;
+      }
+      #flotPie1 table {
+        top: 20px !important;
+        right: -10px !important;
+      }
+      .chart-container {
+        display: table;
+        min-width: 270px;
+        text-align: left;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      #flotLine5 {
+        height: 105px;
+      }
+
+      #flotBarChart {
+        height: 150px;
+      }
+      #cellPaiChart {
+        height: 160px;
+      }
+      .text-link {
+        color: orange;
+        font-weight: bold;
+        margin-right: 2px;
+        text-decoration: none;
+        cursor: text;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Left Panel -->
+    <aside id="left-panel" class="left-panel">
+      <nav class="navbar navbar-expand-sm navbar-default">
+        <div id="main-menu" class="main-menu collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="menu-item-has-children dropdown">
+              <a
+                href="/admindash"
+                class="text-link"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <i class="fa-solid fa-table-columns"></i> Dashboard</a
+              >
+            </li>
+            <li class="menu-item-has-children dropdown">
+              <a
+                href="/productManagment"
+                class="text-link"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <i class="fa-solid fa-bag-shopping"></i> Products</a
+              >
+            </li>
+            <li class="menu-item-has-children dropdown">
+              <a
+                href="/categoryManagment"
+                class="text-link"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <i class="fa-solid fa-list"></i> Categories</a
+              >
+            </li>
+            <li class="menu-item-has-children dropdown">
+              <a
+                href="/usersManagment"
+                class="text-link"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <i class="fa-solid fa-users"></i> User Managment</a
+              >
+            </li>
+            <li class="menu-item-has-children dropdown">
+              <a
+                href="/ordermanagment"
+                class="text-link"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <i class="fa-solid fa-cart-flatbed-suitcase"></i> Order
+                Managment</a
+              >
+            </li>
+            <li class="menu-item-has-children dropdown">
+              <a
+                href="/offerManagment"
+                class="text-link"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <i class="fa-solid fa-handshake"></i> Offer Managment</a
+              >
+            </li>
+            <li class="menu-item-has-children dropdown">
+              <a
+                href="/categoryOfferManagment"
+                class="text-link"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <i class="fa-solid fa-percent"></i> Category Offer Managment</a
+              >
+            </li>
+            <li class="menu-item-has-children dropdown">
+              <a
+                href="/couponManagment"
+                class="text-link"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <i class="fa-solid fa-ticket"></i> Coupon Managment</a
+              >
+            </li>
+            <li class="menu-item-has-children dropdown">
+              <a
+                href="/salesreport"
+                class="text-link"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <i class="fa-solid fa-chart-line"></i> Sales Reports</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </nav>
+    </aside>
+    <!-- /#left-panel -->
+    <!-- Right Panel -->
+    <div id="right-panel" class="right-panel">
+      <!-- Header-->
+      <header id="header" class="header">
+        <div class="top-left">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="./"
+              ><img src="images/logo.png" alt="Logo"
+            /></a>
+            <a class="navbar-brand hidden" href="./"
+              ><img src="images/logo2.png" alt="Logo"
+            /></a>
+            <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
+          </div>
+        </div>
+        <div class="top-right">
+          <div class="header-menu">
+            <div class="header-left">
+              <button class="search-trigger">
+                <i class="fa fa-search"></i>
+              </button>
+              <div class="form-inline">
+                <form class="search-form">
+                  <input
+                    class="form-control mr-sm-2"
+                    type="text"
+                    placeholder="Search ..."
+                    aria-label="Search"
+                  />
+                  <button class="search-close" type="submit">
+                    <i class="fa fa-close"></i>
+                  </button>
+                </form>
+              </div>
+
+              <div class="dropdown for-notification">
+                <button
+                  class="btn btn-secondary dropdown-toggle"
+                  type="button"
+                  id="notification"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i class="fa fa-bell"></i>
+                  <span class="count bg-danger">3</span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="notification">
+                  <p class="red">You have 3 Notification</p>
+                  <a class="dropdown-item media" href="#">
+                    <i class="fa fa-check"></i>
+                    <p>Server #1 overloaded.</p>
+                  </a>
+                  <a class="dropdown-item media" href="#">
+                    <i class="fa fa-info"></i>
+                    <p>Server #2 overloaded.</p>
+                  </a>
+                  <a class="dropdown-item media" href="#">
+                    <i class="fa fa-warning"></i>
+                    <p>Server #3 overloaded.</p>
+                  </a>
+                </div>
+              </div>
+
+              <div class="dropdown for-message">
+                <button
+                  class="btn btn-secondary dropdown-toggle"
+                  type="button"
+                  id="message"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i class="fa fa-envelope"></i>
+                  <span class="count bg-primary">4</span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="message">
+                  <p class="red">You have 4 Mails</p>
+                  <a class="dropdown-item media" href="#">
+                    <span class="photo media-left"
+                      ><img alt="avatar" src="images/avatar/1.jpg"
+                    /></span>
+                    <div class="message media-body">
+                      <span class="name float-left">Jonathan Smith</span>
+                      <span class="time float-right">Just now</span>
+                      <p>Hello, this is an example msg</p>
+                    </div>
+                  </a>
+                  <a class="dropdown-item media" href="#">
+                    <span class="photo media-left"
+                      ><img alt="avatar" src="images/avatar/2.jpg"
+                    /></span>
+                    <div class="message media-body">
+                      <span class="name float-left">Jack Sanders</span>
+                      <span class="time float-right">5 minutes ago</span>
+                      <p>Lorem ipsum dolor sit amet, consectetur</p>
+                    </div>
+                  </a>
+                  <a class="dropdown-item media" href="#">
+                    <span class="photo media-left"
+                      ><img alt="avatar" src="images/avatar/3.jpg"
+                    /></span>
+                    <div class="message media-body">
+                      <span class="name float-left">Cheryl Wheeler</span>
+                      <span class="time float-right">10 minutes ago</span>
+                      <p>Hello, this is an example msg</p>
+                    </div>
+                  </a>
+                  <a class="dropdown-item media" href="#">
+                    <span class="photo media-left"
+                      ><img alt="avatar" src="images/avatar/4.jpg"
+                    /></span>
+                    <div class="message media-body">
+                      <span class="name float-left">Rachel Santos</span>
+                      <span class="time float-right">15 minutes ago</span>
+                      <p>Lorem ipsum dolor sit amet, consectetur</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="user-area dropdown float-right">
+              <a
+                href="#"
+                class="dropdown-toggle active"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <img
+                  class="user-avatar rounded-circle"
+                  src="images/admin1.jpg"
+                  alt="User Avatar"
+                />
+              </a>
+
+              <div class="user-menu dropdown-menu">
+                <a class="nav-link" href="#"
+                  ><i class="fa fa- user"></i>My Profile</a
+                >
+
+                <a class="nav-link" href="#"
+                  ><i class="fa fa- user"></i>Notifications
+                  <span class="count">13</span></a
+                >
+
+                <a class="nav-link" href="#"
+                  ><i class="fa fa -cog"></i>Settings</a
+                >
+
+                <a class="nav-link" href="/admLogOut"
+                  ><i class="fa fa-power -off"></i>Logout</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- /#header -->
+      <!-- Content -->
+
+      <!-- <body> -->
+      <style>
+        .btn-add-offer {
+          background-color: #2196f3;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          padding: 7px 15px;
+          font-size: 15px;
+          transition-duration: 0.3s;
+        }
+        .btn-add-offer:hover {
+          background-color: #1e88e5;
+        }
+        .btn-add-offer:focus {
+          box-shadow: 0 0 0 0.2rem rgba(33, 150, 243, 0.5);
+        }
+        .btn-add-offer:active {
+          background-color: #1976d2;
+        }
+        .custom-table .btn-primary {
+          background-color: #4caf50;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          padding: 8px 12px;
+          font-size: 14px;
+          transition-duration: 0.3s;
+        }
+        .custom-table .btn-primary:hover {
+          background-color: #3e8e41;
+        }
+        .custom-table .btn-primary:focus {
+          box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.5);
+        }
+        .custom-table .btn-primary:active {
+          background-color: #347a37;
+        }
+        .custom-table .btn-danger {
+          background-color: #f44336;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          padding: 8px 12px;
+          font-size: 14px;
+          transition-duration: 0.3s;
+        }
+        .custom-table .btn-danger:hover {
+          background-color: #da190b;
+        }
+        .custom-table .btn-danger:focus {
+          box-shadow: 0 0 0 0.2rem rgba(244, 67, 54, 0.5);
+        }
+        .custom-table .btn-danger:active {
+          background-color: #c62828;
+        }
+      </style>
+
+      <!-- style for edit modal -->
+      <style>
+        #editOffer {
+          background-color: #f5f5f5;
+          border-radius: 10px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #editOffer .modal-dialog {
+          max-width: 600px;
+          margin: 30px auto;
+        }
+
+        #editOffer .modal-header {
+          background-color: #e5e5e5;
+          border-bottom-color: #ddd;
+        }
+
+        #editOffer .modal-title {
+          color: #333;
+        }
+
+        #editOffer .modal-body {
+          padding: 20px;
+        }
+
+        #editOffer .modal-footer {
+          background-color: #e5e5e5;
+          border-top-color: #ddd;
+        }
+
+        #editOffer .modal-footer button {
+          margin: 0 5px;
+        }
+
+        #editOffer .modal-footer .btn-primary {
+          background-color: #4caf50;
+          color: #fff;
+        }
+
+        #editOffer .modal-footer .btn-primary:hover {
+          background-color: #45a049;
+        }
+
+        #editOffer .modal-footer .btn-secondary {
+          background-color: #f44336;
+
+          color: #fff;
+        }
+
+        #editOffer .modal-footer .btn-secondary:hover {
+          background-color: #da190b;
+        }
+      </style>
+      <!-- style for edit modal ends -->
+      <div class="card custom-card">
+        <div class="card-header custom-card-header">
+          <h2 class="card-title custom-card-title">Coupon managment Page</h2>
+          <button
+            type="button"
+            class="btn btn-add-offer"
+            data-bs-toggle="modal"
+            data-bs-target="#addCouponModal"
+          >
+            Add Coupon
+          </button>
+        </div>
+        <div class="table-stats order-table ov-h">
+          <table class="table custom-table">
+            <thead>
+              <tr>
+                <th><strong>No</strong></th>
+                <th scope="col" class="custom-serial-th">
+                  <strong>Coupon Code</strong>
+                </th>
+                <th scope="col" class="custom-avatar-th">
+                  <strong>Discount</strong>
+                </th>
+                <th scope="col" class="custom-id-th">
+                  <strong>Start Date</strong>
+                </th>
+                <th scope="col" class="custom-name-th">
+                  <strong>Expiry Date</strong>
+                </th>
+                <th scope="col" class="custom-name-th">
+                  <strong>Minimum Purchase</strong>
+                </th>
+                <th scope="col" class="custom-name-th">
+                  <strong>Maximum Discount</strong>
+                </th>
+                <th scope="col" class="custom-status-th">
+                  <strong>Action</strong>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <% for( let i = 0; i < totalCoupons.length; i++ ) { %>
+              <tr>
+                <td><%=i+1%></td>
+                <td class="custom-serial-td">
+                  <%=totalCoupons[i].couponCode%>
+                </td>
+                <td class="custom-name-td">
+                  <%=totalCoupons[i].discountPercentage%>%
+                </td>
+                <td class="custom-product-td">
+                  <%=totalCoupons[i].formatedStartDate%>
+                </td>
+                <td class="custom-quantity-td">
+                  <%=totalCoupons[i].formatedExpiryDate.toLocaleString() %>
+                </td>
+                <td class="custom-quantity-td">
+                  <%=totalCoupons[i].minimumPurchase%>
+                </td>
+                <td class="custom-quantity-td">
+                  <%=totalCoupons[i].maximumDiscount%>
+                </td>
+                <td class="custom-id-td">
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#editCoupon<%=i%>"
+                  >
+                    Edit
+                    <i class="far fa-edit"></i>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-danger"
+                    onclick="deleteCoupon('<%=totalCoupons[i]._id%>')"
+                  >
+                    Delete
+                    <i class="far fa-trash-alt"></i>
+                  </button>
+                  <div
+                    class="modal fade"
+                    id="editCoupon<%=i%>"
+                    tabindex="-1"
+                    aria-labelledby="offerModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="offerModalLabel">
+                            Edit Coupon
+                          </h5>
+                          <button
+                            type="button"
+                            class="close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          >
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <form id="editCouponForm<%=i%>">
+                            <div class="form-group">
+                              <label for="offerPercentage">Coupon Code</label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                name="CouponCode"
+                                id="categoryName<%=i%>"
+                                value="<%=totalCoupons[i].couponCode%>"
+                              />
+                              <input
+                                type="hidden"
+                                class="hidden"
+                                name="couponId"
+                                id="categoryName<%=i%>"
+                                value="<%=totalCoupons[i]._id%>"
+                              />
+                            </div>
+                            <div class="form-group">
+                              <label for="offerPercentage"
+                                >Discount Percentage</label
+                              >
+                              <input
+                                type="number"
+                                class="form-control"
+                                name="couponDiscountPercentage"
+                                id="categoryOfferPercentage<%=i%>"
+                                placeholder="Enter offer percentage"
+                                value="<%=totalCoupons[i].discountPercentage%>"
+                              />
+                            </div>
+                            <div class="form-group">
+                              <label for="startDate">Start Date</label>
+                              <input
+                                type="date"
+                                name="startDate"
+                                class="form-control"
+                                id="startDate<%=i%>"
+                                placeholder="Enter start date"
+                                value="<%=totalCoupons[i].startDate.toISOString().split('T')[0]%>"
+                              />
+                            </div>
+                            <div class="form-group">
+                              <label for="endDate">Expiry Date</label>
+                              <input
+                                type="date"
+                                name="endDate"
+                                class="form-control"
+                                id="endDate<%=i%>"
+                                placeholder="Enter end date"
+                                value="<%=totalCoupons[i].expiryDate.toISOString().split('T')[0]%>"
+                              />
+                            </div>
+                            <div class="form-group">
+                              <label for="offerPercentage"
+                                >Minimum Purchase</label
+                              >
+                              <input
+                                type="number"
+                                class="form-control"
+                                name="minimumPurchase"
+                                id="categoryOfferPercentage<%=i%>"
+                                placeholder="Enter offer percentage"
+                                value="<%=totalCoupons[i].minimumPurchase%>"
+                              />
+                            </div>
+                            <div class="form-group">
+                              <label for="offerPercentage"
+                                >Maximum Discount</label
+                              >
+                              <input
+                                type="number"
+                                class="form-control"
+                                name="maximumDiscount"
+                                id="categoryOfferPercentage<%=i%>"
+                                placeholder="Enter offer percentage"
+                                value="<%=totalCoupons[i].maximumDiscount%>"
+                              />
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                              Save Changes
+                            </button>
+                          </form>
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            Cancel
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- edit modal ends -->
+                </td>
+              </tr>
+              <script>
+                $("#editCouponForm<%=i%>").validate({
+                  rules: {
+                    CouponCode: {
+                      required: true,
+                    },
+                    couponId: {
+                      required: true,
+                    },
+                    couponDiscountPercentage: {
+                      required: true,
+                      min: 5,
+                      max: 90,
+                    },
+                    startDate: {
+                      required: true,
+                    },
+                    endDate: {
+                      required: true,
+                    },
+                    minimumPurchase:{
+                      required:true,
+                    },
+                    maximumDiscount:{
+                      required:true,
+                    }
+                  },
+
+                  submitHandler: async (form, event) => {
+                    event.preventDefault();
+                    let editData = {
+                      id: form.couponId.value,
+                      couponCode:form.CouponCode.value,
+                      discountPercentage: form.couponDiscountPercentage.value,
+                      startDate: form.startDate.value,
+                      endDate: form.endDate.value,
+                      minimumPurchase:form.minimumPurchase.value,
+                      maximumDiscount:form.maximumDiscount.value,
+                    };
+
+                    let response = await fetch("/editCoupon/<%=totalCoupons[i]._id%>", {
+                      method: "PUT",
+                      headers: { "Content-Type": "application/json" },
+                      body: JSON.stringify(editData),
+                    });
+
+                    let result = await response.json();
+
+                    if (result.success) {
+                      await Swal.fire({
+                        title: "Offer Updated",
+                        text: "Your offer has been updated successfully",
+                        icon: "success",
+                      }).then(() => location.reload());
+                    } else if (result.exist) {
+                      await Swal.fire({
+                        title: "Coupon already exist",
+                        text: "This same Coupon Code already exist",
+                        icon: "warning",
+                      });
+                    }
+                  },
+                });
+              </script>
+              <% } %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- Modal -->
+      <!-- add offer modal -->
+      <style>
+        .modal-content {
+          /* Customize the background color of the modal content */
+          background-color: #fff;
+
+          /* Customize the border-radius of the modal content */
+          border-radius: 10px;
+
+          /* Customize the box-shadow of the modal content */
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+          /* Customize the padding of the modal content */
+          padding: 20px;
+
+          /* Customize the margin of the modal content */
+          margin: 20px auto;
+
+          /* Customize the width of the modal content */
+          width: 100%;
+
+          /* Customize the max-width of the modal content */
+          max-width: 1000px;
+        }
+
+        .modal-header {
+          /* Customize the padding of the modal header */
+          padding: 1rem 1.5rem;
+
+          /* Customize the border-radius of the modal header */
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+        }
+
+        .modal-title {
+          /* Customize the font-size of the modal title */
+          font-size: 1.5rem;
+
+          /* Customize the font-weight of the modal title */
+          font-weight: bold;
+        }
+
+        .modal-body {
+          /* Customize the padding of the modal body */
+          padding: 1rem 1.5rem;
+
+          /* Customize the font-size of the modal body text */
+          font-size: 1rem;
+        }
+
+        .modal-footer {
+          /* Customize the padding of the modal footer */
+          padding: 1rem 1.5rem;
+
+          /* Customize the border-top color of the modal footer */
+          border-top-color: #ddd;
+
+          /* Customize the display of the modal footer buttons */
+          display: flex;
+          justify-content: flex-end;
+        }
+
+        .btn-secondary {
+          /* Customize the background color of the secondary button */
+          background-color: #6c757d;
+
+          /* Customize the color of the secondary button text */
+          color: #fff;
+
+          /* Customize the border-radius of the secondary button */
+          border-radius: 5px;
+
+          /* Customize the padding of the secondary button */
+          padding: 10px 20px;
+
+          /* Customize the font-size of the secondary button */
+          font-size: 1.2rem;
+
+          /* Customize the transition duration of the secondary button */
+          transition-duration: 0.3s;
+        }
+
+        .btn-secondary:hover {
+          /* Customize the background color of the secondary button on hover */
+          background-color: #5a6268;
+        }
+
+        .btn-secondary:focus {
+          /* Customize the box-shadow of the secondary button on focus */
+          box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
+        }
+
+        .btn-secondary:active {
+          /* Customize the background color of the secondary button on active */
+          background-color: #4e555b;
+        }
+
+        .btn-primary {
+          /* Customize the background color of the primary button */
+          background-color: #4caf50;
+
+          /* Customize the color of the primary button text */
+          color: #fff;
+
+          /* Customize the border-radius of the primary button */
+          border-radius: 5px;
+
+          /* Customize the padding of the primary button */
+          padding: 10px 20px;
+
+          /* Customize the font-size of the primary button */
+          font-size: 1.2rem;
+
+          /* Customize the transition duration of the primary button */
+          transition-duration: 0.3s;
+        }
+
+        .btn-primary:hover {
+          /* Customize the background color of the primary button on hover */
+          background-color: #3e8e41;
+        }
+
+        .btn-primary:focus {
+          /* Customize the box-shadow of the primary button on focus */
+          box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.5);
+        }
+
+        .btn-primary:active {
+          /* Customize the background color of the primary button on active */
+          background-color: #347a37;
+        }
+      </style>
+      <div
+        class="modal fade"
+        id="addCouponModal"
+        tabindex="-1"
+        aria-labelledby="addOfferModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="addOfferModalLabel">
+                Add Category Offer
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form id="addCouponForm" role="form">
+                <div class="mb-3">
+                  <label for="couponCode" class="form-label"
+                    >Coupon Code:</label
+                  >
+                  <input
+                    id="couponCode"
+                    name="couponCode"
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter coupon code"
+                    required
+                    minlength="5"
+                    maxlength="16"
+                  />
+                  <span id="couponCodeError" class="error"></span>
+                </div>
+
+                <div class="mb-3">
+                  <label for="discountPercentage" class="form-label"
+                    >Discount Percentage:</label
+                  >
+                  <input
+                    id="discountPercentage"
+                    name="discountPercentage"
+                    type="number"
+                    class="form-control"
+                    placeholder="Enter discount percentage"
+                    required
+                    min="5"
+                    max="90"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="startDate" class="form-label"
+                    >Coupon Start Date:</label
+                  >
+                  <input
+                    id="startDate"
+                    name="startDate"
+                    type="date"
+                    class="form-control"
+                    required
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="expiryDate" class="form-label"
+                    >Coupon Expiry Date:</label
+                  >
+                  <input
+                    id="expiryDate"
+                    name="expiryDate"
+                    type="date"
+                    class="form-control"
+                    required
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="minimumPurchase" class="form-label"
+                    >Minimum Purchase:</label
+                  >
+                  <input
+                    id="minimumPurchase"
+                    name="minimumPurchase"
+                    type="number"
+                    class="form-control"
+                    placeholder="Enter minimum purchase required"
+                    required
+                    min="1"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="maximumDiscount" class="form-label"
+                    >Maximum Discount:</label
+                  >
+                  <input
+                    id="maximumDiscount"
+                    name="maximumDiscount"
+                    type="number"
+                    class="form-control"
+                    placeholder="Maximum discount applicable"
+                    required
+                    min="1"
+                  />
+                </div>
+
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button id="addCouponBtn" type="submit" class="btn btn-info">
+                  Save changes
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- add offer model End -->
+      <script>
+        $.validator.addMethod(
+          "noWhitespace",
+          function (value, element) {
+            return value.trim() !== ""; // Check if the trimmed value is not empty
+          },
+          "Please enter a valid value."
+        );
+
+        $("#addCouponForm").validate({
+          rules: {
+            couponCode: {
+              required: true,
+              noWhitespace: true,
+              minlength: 2,
+              maxlength: 20,
+            },
+          },
+
+          submitHandler: async (form, event) => {
+            event.preventDefault();
+            // Create a new FormData object
+            let formData = {
+              couponCode: form.couponCode.value,
+              discountPercentage: form.discountPercentage.value,
+              startDate: form.startDate.value,
+              expiryDate: form.expiryDate.value,
+              minimumPurchase: form.minimumPurchase.value,
+              maximumDiscount: form.maximumDiscount.value,
+            };
+
+            let response = await fetch("/newCouponCreate", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(formData),
+            });
+            let result = await response.json();
+
+            if (result.success) {
+              await Swal.fire({
+                title: "Coupon Added",
+                text: "Coupon Created successfully ",
+                icon: "success",
+              }).then(() => location.reload());
+            } else if (result.exist) {
+              await Swal.fire({
+                title: "Coupon exists",
+                text: "This Coupon already exists ",
+                icon: "warning",
+              });
+            } else {
+              await Swal.fire({
+                title: "something went wrong",
+                text: "couldn't add the Coupon",
+                icon: "error",
+              });
+            }
+          },
+        });
+
+        var today = new Date().toISOString().split("T")[0];
+
+        document.addEventListener("DOMContentLoaded", function () {
+          document.getElementById("startDate").setAttribute("min", today);
+        });
+
+        var startDateInput = document.getElementById("startDate");
+        var expiryDateInput = document.getElementById("expiryDate");
+
+        startDateInput.addEventListener("change", function () {
+          var startDate = startDateInput.value;
+          expiryDateInput.setAttribute("min", startDate);
+        });
+
+        expiryDateInput.addEventListener("change", function () {
+          var expiryDate = expiryDateInput.value;
+          startDateInput.setAttribute("max", expiryDate);
+        });
+
+        //for deleting the coupon
+        async function deleteCoupon(couponId) {
+          try {
+            await Swal.fire({
+              title: "Are you sure?",
+              text: "You want to delete this Coupon!",
+              icon: "warning",
+              showCancelButton: true,
+              confirmButtonColor: "#3085d6",
+              cancelButtonColor: "#d33",
+              confirmButtonText: "Yes, delete it!",
+            }).then(async (result) => {
+              if (result.isConfirmed) {
+                let response = await fetch(`/deleteCoupon/${couponId}`, {
+                  method: "POST",
+                  headers: { "Content-Type": "application/json" },
+                });
+                let res = await response.json();
+                console.log(res);
+                if (res.success) {
+                  Swal.fire({
+                    title: "Deleted!",
+                    text: "Your file has been deleted.",
+                    icon: "success",
+                    confirmButtonColor: "#3085d6",
+                    cancelButtonColor: "#d33",
+                    confirmButtonText: "Successfully deleted ",
+                  }).then((result) => {
+                    if (result.isConfirmed) window.location.reload();
+                  });
+                }
+              } else {
+                await Swal.fire({
+                  title: "Coupon not Deleted!",
+                  text: "Couldn't Delete the coupon",
+                  icon: "error",
+                });
+              }
+            });
+          } catch (error) {
+            console.log(
+              "Something Went wrong while deleting the Coupon",
+              error
+            );
+          }
+        }
+      </script>
+      <!-- edit modal End -->
+
+      <!-- </body> -->
+      <div class="clearfix"></div>
+      <!-- Footer -->
+      <footer class="site-footer">
+        <div class="footer-inner bg-white">
+          <div class="row">
+            <div class="col-sm-6">Copyright &copy; 2018 Ela Admin</div>
+            <div class="col-sm-6 text-right">
+              Designed by <a href="https://colorlib.com">Colorlib</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- /.site-footer -->
+    </div>
+    <!-- /#right-panel -->
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!--  Chart js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.3/dist/Chart.bundle.min.js"></script>
+
+    <!--Chartist Chart-->
+    <script src="https://cdn.jsdelivr.net/npm/chartist@0.11.0/dist/chartist.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartist-plugin-legend@0.6.2/chartist-plugin-legend.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery.flot@0.8.3/jquery.flot.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flot-pie@1.0.0/src/jquery.flot.pie.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flot-spline@0.0.1/js/jquery.flot.spline.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/simpleweather@3.1.0/jquery.simpleWeather.min.js"></script>
+    <script src="assets/js/init/weather-init.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.js"></script>
+    <script src="assets/js/init/fullcalendar-init.js"></script>
+
+    <!--Local Stuff-->
+    <script>
+      jQuery(document).ready(function ($) {
+        "use strict";
+
+        // Pie chart flotPie1
+        var piedata = [
+          { label: "Desktop visits", data: [[1, 32]], color: "#5c6bc0" },
+          { label: "Tab visits", data: [[1, 33]], color: "#ef5350" },
+          { label: "Mobile visits", data: [[1, 35]], color: "#66bb6a" },
+        ];
+
+        $.plot("#flotPie1", piedata, {
+          series: {
+            pie: {
+              show: true,
+              radius: 1,
+              innerRadius: 0.65,
+              label: {
+                show: true,
+                radius: 2 / 3,
+                threshold: 1,
+              },
+              stroke: {
+                width: 0,
+              },
+            },
+          },
+          grid: {
+            hoverable: true,
+            clickable: true,
+          },
+        });
+        // Pie chart flotPie1  End
+        // cellPaiChart
+        var cellPaiChart = [
+          { label: "Direct Sell", data: [[1, 65]], color: "#5b83de" },
+          { label: "Channel Sell", data: [[1, 35]], color: "#00bfa5" },
+        ];
+        $.plot("#cellPaiChart", cellPaiChart, {
+          series: {
+            pie: {
+              show: true,
+              stroke: {
+                width: 0,
+              },
+            },
+          },
+          legend: {
+            show: false,
+          },
+          grid: {
+            hoverable: true,
+            clickable: true,
+          },
+        });
+        // cellPaiChart End
+        // Line Chart  #flotLine5
+        var newCust = [
+          [0, 3],
+          [1, 5],
+          [2, 4],
+          [3, 7],
+          [4, 9],
+          [5, 3],
+          [6, 6],
+          [7, 4],
+          [8, 10],
+        ];
+
+        var plot = $.plot(
+          $("#flotLine5"),
+          [
+            {
+              data: newCust,
+              label: "New Data Flow",
+              color: "#fff",
+            },
+          ],
+          {
+            series: {
+              lines: {
+                show: true,
+                lineColor: "#fff",
+                lineWidth: 2,
+              },
+              points: {
+                show: true,
+                fill: true,
+                fillColor: "#ffffff",
+                symbol: "circle",
+                radius: 3,
+              },
+              shadowSize: 0,
+            },
+            points: {
+              show: true,
+            },
+            legend: {
+              show: false,
+            },
+            grid: {
+              show: false,
+            },
+          }
+        );
+        // Line Chart  #flotLine5 End
+        // Traffic Chart using chartist
+        if ($("#traffic-chart").length) {
+          var chart = new Chartist.Line(
+            "#traffic-chart",
+            {
+              labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+              series: [
+                [0, 18000, 35000, 25000, 22000, 0],
+                [0, 33000, 15000, 20000, 15000, 300],
+                [0, 15000, 28000, 15000, 30000, 5000],
+              ],
+            },
+            {
+              low: 0,
+              showArea: true,
+              showLine: false,
+              showPoint: false,
+              fullWidth: true,
+              axisX: {
+                showGrid: true,
+              },
+            }
+          );
+
+          chart.on("draw", function (data) {
+            if (data.type === "line" || data.type === "area") {
+              data.element.animate({
+                d: {
+                  begin: 2000 * data.index,
+                  dur: 2000,
+                  from: data.path
+                    .clone()
+                    .scale(1, 0)
+                    .translate(0, data.chartRect.height())
+                    .stringify(),
+                  to: data.path.clone().stringify(),
+                  easing: Chartist.Svg.Easing.easeOutQuint,
+                },
+              });
+            }
+          });
+        }
+        // Traffic Chart using chartist End
+        //Traffic chart chart-js
+        if ($("#TrafficChart").length) {
+          var ctx = document.getElementById("TrafficChart");
+          ctx.height = 150;
+          var myChart = new Chart(ctx, {
+            type: "line",
+            data: {
+              labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+              datasets: [
+                {
+                  label: "Visit",
+                  borderColor: "rgba(4, 73, 203,.09)",
+                  borderWidth: "1",
+                  backgroundColor: "rgba(4, 73, 203,.5)",
+                  data: [0, 2900, 5000, 3300, 6000, 3250, 0],
+                },
+                {
+                  label: "Bounce",
+                  borderColor: "rgba(245, 23, 66, 0.9)",
+                  borderWidth: "1",
+                  backgroundColor: "rgba(245, 23, 66,.5)",
+                  pointHighlightStroke: "rgba(245, 23, 66,.5)",
+                  data: [0, 4200, 4500, 1600, 4200, 1500, 4000],
+                },
+                {
+                  label: "Targeted",
+                  borderColor: "rgba(40, 169, 46, 0.9)",
+                  borderWidth: "1",
+                  backgroundColor: "rgba(40, 169, 46, .5)",
+                  pointHighlightStroke: "rgba(40, 169, 46,.5)",
+                  data: [1000, 5200, 3600, 2600, 4200, 5300, 0],
+                },
+              ],
+            },
+            options: {
+              responsive: true,
+              tooltips: {
+                mode: "index",
+                intersect: false,
+              },
+              hover: {
+                mode: "nearest",
+                intersect: true,
+              },
+            },
+          });
+        }
+        //Traffic chart chart-js  End
+        // Bar Chart #flotBarChart
+        $.plot(
+          "#flotBarChart",
+          [
+            {
+              data: [
+                [0, 18],
+                [2, 8],
+                [4, 5],
+                [6, 13],
+                [8, 5],
+                [10, 7],
+                [12, 4],
+                [14, 6],
+                [16, 15],
+                [18, 9],
+                [20, 17],
+                [22, 7],
+                [24, 4],
+                [26, 9],
+                [28, 11],
+              ],
+              bars: {
+                show: true,
+                lineWidth: 0,
+                fillColor: "#ffffff8a",
+              },
+            },
+          ],
+          {
+            grid: {
+              show: false,
+            },
+          }
+        );
+        // Bar Chart #flotBarChart End
+      });
+    </script>
+  </body>
+</html>

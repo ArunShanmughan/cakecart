@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Mirrored from maraviyainfotech.com/wrapbootstrap/masterkart-html/masterkart-html/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Mar 2024 10:02:15 GMT -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+
+    <title>Cake Cart</title>
+    <meta
+      name="keywords"
+      content="Bootstrap 5.x, ecommerce, farming, food market, grocery market, grocery shop, grocery store, grocery supper market, multi vendor, organic food, supermarket, supermarket grocery"
+    />
+    <meta name="description" content="Multipurpose eCommerce HTML Template" />
+    <meta name="author" content="ashishmaraviya" />
+
+    <!-- site Favicon -->
+    <link rel="icon" href="/assets/img/favicon/favicon.png" sizes="32x32" />
+
+    <!-- css Icon Font -->
+    <link rel="stylesheet" href="/assets/css/vendor/msicons.min.css" />
+
+    <!-- css All Plugins Files -->
+    <link rel="stylesheet" href="/assets/css/plugins/animate.css" />
+    <link rel="stylesheet" href="/assets/css/plugins/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="/assets/css/plugins/bootstrap-select.min.css"
+    />
+    <link rel="stylesheet" href="/assets/css/plugins/owl.carousel.min.css" />
+    <link
+      rel="stylesheet"
+      href="/assets/css/plugins/owl.theme.default.min.css"
+    />
+    <link rel="stylesheet" href="/assets/css/plugins/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/assets/css/plugins/slick.min.css" />
+    <link rel="stylesheet" href="/assets/css/plugins/nouislider.css" />
+
+    <!-- Main Style -->
+    <link rel="stylesheet" id="main_style" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+  </head>
+
+  <body>
+    <!-- Breadcrumb start -->
+    <div class="ms-breadcrumb m-b-30">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="row ms_breadcrumb_inner">
+              <div class="col-md-6 col-sm-12">
+                <h2 class="ms-breadcrumb-title">Register Page</h2>
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <!-- ms-breadcrumb-list start -->
+                <ul class="ms-breadcrumb-list">
+                  <li class="ms-breadcrumb-item"><a href="/">Home</a></li>
+                  <li class="ms-breadcrumb-item active">Register Page</li>
+                </ul>
+                <!-- ms-breadcrumb-list end -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Breadcrumb end -->
+
+    <!-- Register section -->
+    <section class="ms-register padding-tb-30">
+      <div class="container">
+        <div class="section-title-2">
+          <h2 class="ms-title">Register<span></span></h2>
+          <p>Best place to buy Bakery products.</p>
+        </div>
+        <div class="row p-t-15">
+          <div class="ms-register-wrapper">
+            <div class="ms-register-container">
+              <div class="ms-register-form">
+                <form
+                  id="validation"
+                  action="/views/users/signup"
+                  method="post"
+                >
+                  <span class="ms-register-wrap ms-register-half">
+                    <label>First Name*</label>
+                    <input
+                      type="text"
+                      name="firstname"
+                      placeholder="Enter your first name"
+                      required
+                    />
+                  </span>
+                  <span class="ms-register-wrap ms-register-half">
+                    <label>Last Name*</label>
+                    <input
+                      type="text"
+                      name="lastname"
+                      placeholder="Enter your last name"
+                      required
+                    />
+                  </span>
+                  <span class="ms-register-wrap ms-register-half">
+                    <label>Email*</label>
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Enter your email add..."
+                      required
+                    />
+                  </span>
+                  <span class="ms-register-wrap ms-register-half">
+                    <label>Phone Number*</label>
+                    <input
+                      type="text"
+                      name="phonenumber"
+                      placeholder="Enter your phone number"
+                      required
+                    />
+                  </span>
+                  <span class="ms-register-wrap">
+                    <label>Address*</label>
+                    <input
+                      type="text"
+                      name="address"
+                      placeholder="Address Line 1"
+                    />
+                  </span>
+                  <span class="ms-register-wrap ms-register-half">
+                    <label>Post Code*</label>
+                    <input
+                      type="text"
+                      name="postCode"
+                      placeholder="Post Code"
+                    />
+                  </span>
+                  <span class="ms-register-wrap ms-register-half">
+                    <label>Country *</label>
+                    <input type="text" name="country" placeholder="Country" />
+                  </span>
+                  <span class="ms-register-wrap ms-register-half">
+                    <label>Password*</label>
+                    <input
+                      type="password"
+                      name="password"
+                      placeholder="Password"
+                    />
+                  </span>
+                  <span class="ms-register-wrap ms-recaptcha">
+                    <span
+                      class="g-recaptcha"
+                      data-sitekey="6LfKURIUAAAAAO50vlwWZkyK_G2ywqE52NU7YO0S"
+                      data-callback="verifyRecaptchaCallback"
+                      data-expired-callback="expiredRecaptchaCallback"
+                    ></span>
+                    <% if(typeof message!=="undefined"){ %>
+                      <p style="color: red;">
+                        <%= message %>
+                    </p>
+                      <% } %>
+                    <input
+                      class="form-control d-none"
+                      data-recaptcha="true"
+                      required
+                      data-error="Please complete the Captcha"
+                    />
+                    <span class="help-block with-errors"></span>
+                  </span>
+                  <span class="ms-register-wrap ms-register-btn">
+                    <span
+                      >Already have an account?<a href="/views/users/login"
+                        >Login</a
+                      ></span
+                    >
+                    <button class="ms-btn-2" type="submit">Register</button>
+                  </span>
+                </form>
+                <script
+                  src="https://code.jquery.com/jquery-3.7.1.js"
+                  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+                  crossorigin="anonymous"
+                ></script>
+                <script
+                  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js"
+                  integrity="sha512-WMEKGZ7L5LWgaPeJtw9MBM4i5w5OSBlSjTjCtSnvFJGSVD26gE5+Td12qN5pvWXhuWaWcVwF++F7aqu9cvqP0A=="
+                  crossorigin="anonymous"
+                  referrerpolicy="no-referrer"
+                ></script>
+                <script
+                  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/additional-methods.min.js"
+                  integrity="sha512-TiQST7x/0aMjgVTcep29gi+q5Lk5gVTUPE9XgN0g96rwtjEjLpod4mlBRKWHeBcvGBAEvJBmfDqh2hfMMmg+5A=="
+                  crossorigin="anonymous"
+                  referrerpolicy="no-referrer"
+                ></script>
+
+                <script>
+                  $("#validation").validate({
+                    rules: {
+                      firstname: {
+                        pattern: /^[a-zA-Z]+(?: [a-zA-Z]+)*$/,
+                        required: true,
+                      },
+                      lastname: {
+                        pattern: /^[a-zA-Z]+(?: [a-zA-Z]+)*$/,
+                        required: true,
+                      },
+                      email: {
+                        email:true,
+                        required: true,
+                      },
+                      phonenumber: {
+                        pattern: /^\+?[1-9][0-9]{9}$/,
+                        required: true,
+                      },
+                      address: {
+                        pattern: /^[a-zA-Z]+(?: [a-zA-Z]+)*$/,
+                        required: true,
+                      },
+                      postCode: {
+                        pattern: /^\+?[1-9][0-9]{5}$/,
+                        required: true,
+                      },
+                      password: {
+                        pattern: /^.{6,30}$/,
+                        required: true,
+                      },
+                    },
+                  });
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Sample section End -->
+
+    <!-- Footer Start -->
+    <footer class="ms-footer m-t-30">
+      <div class="footer-container">
+        <div class="footer-top padding-tb-60">
+          <div class="container">
+            <div class="row m-minus-991">
+              <div class="col-sm-12 col-lg-3 ms-footer-cat">
+                <div class="ms-footer-widget ms-footer-company">
+                  <img
+                    src="assets/img/logo/footer-logo.png"
+                    class="ms-footer-logo"
+                    alt="footer logo"
+                  />
+                  <p class="ms-footer-detail">
+                    Masterkart is the biggest market of grocery products. Get
+                    your daily needs from our store.
+                  </p>
+                  <div class="ms-app-store">
+                    <a href="#" class="app-img"
+                      ><img
+                        src="assets/img/app/android.png"
+                        class="adroid"
+                        alt="apple"
+                    /></a>
+                    <a href="#" class="app-img"
+                      ><img
+                        src="assets/img/app/apple.png"
+                        class="apple"
+                        alt="apple"
+                    /></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-2 ms-footer-info">
+                <div class="ms-footer-widget">
+                  <h4 class="ms-footer-heading">Category</h4>
+                  <div class="ms-footer-links ms-footer-dropdown">
+                    <ul class="align-items-center">
+                      <li class="ms-footer-link">
+                        <a href="shop-left-sidebar-col-3.ejs">Dairy & Milk</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="shop-banner-left-sidebar-col-3.ejs"
+                          >Snack & Spice</a
+                        >
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="shop-full-width-col-5.ejs">Fast Food</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="shop-list-left-sidebar.ejs">Juice & Drinks</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="shop-list-full-col-2.ejs">Bakery</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="shop-banner-right-sidebar-col-4.ejs"
+                          >Seafood</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-2 ms-footer-account">
+                <div class="ms-footer-widget">
+                  <h4 class="ms-footer-heading">Company</h4>
+                  <div class="ms-footer-links ms-footer-dropdown">
+                    <ul class="align-items-center">
+                      <li class="ms-footer-link">
+                        <a href="about-us.ejs">About us</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="track-order.ejs">Delivery</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="privacy-policy.ejs">Legal Notice</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="terms-condition.ejs">Terms & conditions</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="checkout.ejs">Secure payment</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="contact-us.ejs">Contact us</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-2 ms-footer-service">
+                <div class="ms-footer-widget">
+                  <h4 class="ms-footer-heading">Account</h4>
+                  <div class="ms-footer-links ms-footer-dropdown">
+                    <ul class="align-items-center">
+                      <li class="ms-footer-link">
+                        <a href="register.ejs">Sign In</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="cart.ejs">View Cart</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="privacy-policy.ejs">Return Policy</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="#">Become a Vendor</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="#">Affiliate Program</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="checkout.ejs">Payments</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-3 ms-footer-cont-social">
+                <div class="ms-footer-contact">
+                  <div class="ms-footer-widget">
+                    <h4 class="ms-footer-heading">Contact</h4>
+                    <div class="ms-footer-links ms-footer-dropdown">
+                      <ul class="align-items-center">
+                        <li class="ms-footer-link ms-foo-location">
+                          <span
+                            ><img
+                              src="assets/img/icons/foo-location.svg"
+                              class="svg_img foo_svg"
+                              alt=""
+                          /></span>
+                          <p>
+                            2548 Broaddus Maple Court, Madisonville KY 4783,
+                            USA.
+                          </p>
+                        </li>
+                        <li class="ms-footer-link ms-foo-call">
+                          <span
+                            ><img
+                              src="assets/img/icons/foo-wp.svg"
+                              class="svg_img foo_svg"
+                              alt="" /></span
+                          ><a href="tel:+009876543210">+00 9876543210</a>
+                        </li>
+                        <li class="ms-footer-link ms-foo-mail">
+                          <span
+                            ><img
+                              src="assets/img/icons/foo-mail.svg"
+                              class="svg_img foo_svg"
+                              alt="" /></span
+                          ><a href="mailto:example@email.com"
+                            >example@email.com</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="ms-footer-social">
+                  <div class="ms-footer-widget">
+                    <div class="ms-footer-links ms-footer-dropdown">
+                      <ul class="align-items-center">
+                        <li class="ms-footer-link">
+                          <a href="#"
+                            ><i
+                              class="msicon msi-instagram"
+                              aria-hidden="true"
+                            ></i
+                          ></a>
+                        </li>
+                        <li class="ms-footer-link">
+                          <a href="#"
+                            ><i
+                              class="msicon msi-twitter-square"
+                              aria-hidden="true"
+                            ></i
+                          ></a>
+                        </li>
+                        <li class="ms-footer-link">
+                          <a href="#"
+                            ><i
+                              class="msicon msi-facebook-square"
+                              aria-hidden="true"
+                            ></i
+                          ></a>
+                        </li>
+                        <li class="ms-footer-link">
+                          <a href="#"
+                            ><i
+                              class="msicon msi-linkedin-square"
+                              aria-hidden="true"
+                            ></i
+                          ></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="container">
+            <div class="row">
+              <div class="ms-bottom-info">
+                <!-- Footer Copyright Start -->
+                <div class="footer-copy">
+                  <div class="footer-bottom-copy">
+                    <div class="ms-copy">
+                      Copyright ©
+                      <a class="site-name" href="index-2.ejs">Masterkart</a>
+                      all rights reserved. Powered by Masterkart.
+                    </div>
+                  </div>
+                </div>
+                <!-- Footer Copyright End -->
+                <!-- Footer payment -->
+                <div class="footer-bottom-right">
+                  <div
+                    class="footer-bottom-payment d-flex justify-content-center"
+                  >
+                    <div class="payment-link">
+                      <img src="assets/img/hero-bg/payment.png" alt="payment" />
+                    </div>
+                  </div>
+                </div>
+                <!-- Footer payment -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Area End -->
+
+    <!-- Back to top  -->
+    <a class="ms-back-to-top"></a>
+
+    <!-- Features sidebar  -->
+    <div class="ms-features-sidebar-overlay"></div>
+    <div class="ms-features-sidebar">
+      <div class="tool-title">
+        <h3>Features</h3>
+      </div>
+      <a href="#" class="ms-tools-sidebar-toggle open-features">
+        <img alt="icon" src="/assets/img/icons/setting.svg" class="svg_img" />
+      </a>
+      <div class="ms-features-block">
+        <div class="ms-features-title">Colors</div>
+        <ul class="bg-panel ms-change-color">
+          <li class="active" data-color="01">
+            <a href="javascript:void(0)" class="colorcode1"></a>
+          </li>
+          <li data-color="02">
+            <a href="javascript:void(0)" class="colorcode2"></a>
+          </li>
+          <li data-color="03">
+            <a href="javascript:void(0)" class="colorcode3"></a>
+          </li>
+          <li data-color="04">
+            <a href="javascript:void(0)" class="colorcode4"></a>
+          </li>
+          <li data-color="05">
+            <a href="javascript:void(0)" class="colorcode5"></a>
+          </li>
+          <li data-color="06">
+            <a href="javascript:void(0)" class="colorcode6"></a>
+          </li>
+          <li data-color="07">
+            <a href="javascript:void(0)" class="colorcode7"></a>
+          </li>
+          <li data-color="08">
+            <a href="javascript:void(0)" class="colorcode8"></a>
+          </li>
+          <li data-color="09">
+            <a href="javascript:void(0)" class="colorcode9"></a>
+          </li>
+        </ul>
+      </div>
+      <div class="ms-features-block">
+        <div class="ms-tools-sidebar-content">
+          <div class="ms-features-title">Dark mode</div>
+          <div class="ms-change-mode" id="ms-change-mode">
+            <div class="ms-mode-switch">
+              <div class="ms-mode-btn">Mode</div>
+              <div class="ms-mode-on">On</div>
+              <div class="ms-mode-off">Off</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plugins JS -->
+    <script src="/assets/js/plugins/jquery-3.5.1.min.js"></script>
+    <script src="/assets/js/plugins/popper.min.js"></script>
+    <script src="/assets/js/plugins/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/plugins/bootstrap-select.min.js"></script>
+    <script src="/assets/js/plugins/fontawesome.js"></script>
+    <script src="/assets/js/plugins/owl.carousel.min.js"></script>
+    <script src="/assets/js/plugins/swiper-bundle.min.js"></script>
+    <script src="/assets/js/plugins/infiniteslidev2.js"></script>
+    <script src="/assets/js/plugins/jquery.zoom.min.js"></script>
+    <script src="/assets/js/plugins/slick.min.js"></script>
+    <script src="/assets/js/plugins/nouislider.js"></script>
+
+    <!-- Main Js -->
+    <script src="/assets/js/main.js"></script>
+  </body>
+
+  <!-- Mirrored from maraviyainfotech.com/wrapbootstrap/masterkart-html/masterkart-html/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Mar 2024 10:02:15 GMT -->
+</html>

@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Mirrored from maraviyainfotech.com/wrapbootstrap/masterkart-html/masterkart-html/shop-full-width.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Mar 2024 10:02:16 GMT -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+
+    <title>Cake Cart</title>
+    <meta
+      name="keywords"
+      content="Bootstrap 5.x, ecommerce, farming, food market, grocery market, grocery shop, grocery store, grocery supper market, multi vendor, organic food, supermarket, supermarket grocery"
+    />
+    <meta name="description" content="Multipurpose eCommerce HTML Template" />
+    <meta name="author" content="ashishmaraviya" />
+
+    <!-- site Favicon -->
+    <link rel="icon" href="/assets/img/favicon/favicon.png" sizes="32x32" />
+
+    <!-- sweetalert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- css Icon Font -->
+    <link rel="stylesheet" href="/assets/css/vendor/msicons.min.css" />
+
+    <!-- css All Plugins Files -->
+    <link rel="stylesheet" href="/assets/css/plugins/animate.css" />
+    <link rel="stylesheet" href="/assets/css/plugins/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="/assets/css/plugins/bootstrap-select.min.css"
+    />
+    <link rel="stylesheet" href="/assets/css/plugins/owl.carousel.min.css" />
+    <link
+      rel="stylesheet"
+      href="/assets/css/plugins/owl.theme.default.min.css"
+    />
+    <link rel="stylesheet" href="/assets/css/plugins/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/assets/css/plugins/slick.min.css" />
+    <link rel="stylesheet" href="/assets/css/plugins/nouislider.css" />
+
+    <!-- Main Style -->
+    <link rel="stylesheet" id="main_style" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+  </head>
+
+  <body>
+    <!-- Header start  -->
+    <header class="ms-header">
+      <!-- Header Top Start -->
+
+      <!-- Header Bottom  Start -->
+      <div class="ms-header-bottom d-none d-lg-block">
+        <div class="container position-relative">
+          <div class="row">
+            <div class="ms-flex">
+              <!-- Header Logo Start -->
+              <div class="align-self-center ms-header-logo">
+                <div class="header-logo">
+                  <a href="index-2.ejs"
+                    ><img src="/assets/img/logo/logo.png" alt="Site Logo"
+                  /></a>
+                </div>
+              </div>
+              <!-- Header Logo End -->
+
+              <!-- Header Search Start -->
+              <div class="align-self-center ms-header-search">
+                <div class="header-search">
+                  <form class="ms-search-group-form" action="#">
+                    <input
+                      class="form-control ms-search-bar"
+                      placeholder="Search Products..."
+                      type="text"
+                    />
+                    <button class="search_submit" type="submit">
+                      <img
+                        src="/assets/img/icons/search.svg"
+                        class="svg_img search_svg"
+                        alt=""
+                      />
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <!-- Header Search End -->
+
+              <!-- Header Button Start -->
+              <div class="align-self-center">
+                <div class="ms-header-bottons">
+                  <!-- Header User Start -->
+
+                  <% if(islogin==true){ %>
+                  <div class="ms-acc-drop">
+                    <a
+                      href="javascript:void(0)"
+                      class="ms-header-btn ms-header-user dropdown-toggle ms-user-toggle"
+                      title="Account"
+                    >
+                      <div class="header-icon">
+                        <img
+                          src="assets/img/icons/user.svg"
+                          class="svg_img header_svg"
+                          alt=""
+                        />
+                      </div>
+                      <div class="ms-btn-desc">
+                        <span class="ms-btn-title">Account</span>
+                        <span class="ms-btn-stitle">Log-Out</span>
+                      </div>
+                    </a>
+                    <ul class="ms-dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="/views/users/myaccount"
+                          >My Account</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/views/users/logout"
+                          >Log-Out</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+
+                  <% }else{ %>
+                  <div class="ms-acc-drop">
+                    <a
+                      href="javascript:void(0)"
+                      class="ms-header-btn ms-header-user dropdown-toggle ms-user-toggle"
+                      title="Account"
+                    >
+                      <div class="header-icon">
+                        <img
+                          src="assets/img/icons/user.svg"
+                          class="svg_img header_svg"
+                          alt=""
+                        />
+                      </div>
+                      <div class="ms-btn-desc">
+                        <span class="ms-btn-title">Account</span>
+                        <span class="ms-btn-stitle">Login</span>
+                      </div>
+                    </a>
+                    <ul class="ms-dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="/signup">Signup</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/views/users/login"
+                          >Login</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <% } %>
+                  <!-- Header User End -->
+                  <!-- Header wishlist Start -->
+                  <a
+                    href="javascript:void(0)"
+                    class="ms-header-btn ms-wish-toggle"
+                    title="Wishlist"
+                  >
+                    <div class="header-icon">
+                      <img
+                        src="assets/img/icons/wishlist.svg"
+                        class="svg_img header_svg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="ms-btn-desc">
+                      <span class="ms-btn-title">Wishlist</span>
+                      <span class="ms-btn-stitle"
+                        ><b class="ms-wishlist-count">3</b>-items</span
+                      >
+                    </div>
+                  </a>
+                  <!-- Header wishlist End -->
+                  <!-- Header Cart Start -->
+                  <a
+                    href="javascript:void(0)"
+                    class="ms-header-btn ms-cart-toggle"
+                    title="Cart"
+                  >
+                    <div class="header-icon">
+                      <img
+                        src="assets/img/icons/cart_5.svg"
+                        class="svg_img header_svg"
+                        alt=""
+                      />
+                      <span class="main-label-note-new"></span>
+                    </div>
+                    <div class="ms-btn-desc">
+                      <span class="ms-btn-title">Cart</span>
+                      <span class="ms-btn-stitle"
+                        ><b class="ms-cart-count">3</b>-items</span
+                      >
+                    </div>
+                  </a>
+                  <!-- Header Cart End -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Header Button End -->
+
+      <!-- Header menu -->
+      <div class="ms-header-cat d-none d-lg-block">
+        <div class="container position-relative">
+          <div class="row justify-content-between">
+            <!-- Category Toggle -->
+            <div class="col ms-category-icon-block">
+              <div class="ms-category-menu">
+                <div class="ms-category-toggle">
+                  <img
+                    src="/assets/img/icons/category-icon.svg"
+                    class="svg_img header_svg svg_cat"
+                    alt="icon"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Main Menu Start -->
+            <div id="ms-main-menu-desk" class="d-none d-lg-block sticky-nav">
+              <div class="position-relative nav-desk">
+                <div class="row">
+                  <div class="col-md-12 align-self-center">
+                    <div class="ms-main-menu">
+                      <ul>
+                        <li class="non-drop">
+                          <a href="homePage.ejs">Home</a>
+                        </li>
+                        <li class="dropdown drop-list">
+                          <a href="javascript:void(0)" class="dropdown-arrow"
+                            >Products</a
+                          >
+                        </li>
+                        <li class="dropdown drop-list">
+                          <a href="javascript:void(0)" class="dropdown-arrow"
+                            >Others<i class="msicon msi-angle-right"></i
+                          ></a>
+                          <ul class="sub-menu">
+                            <li><a href="about-us.ejs">About Us</a></li>
+                            <li><a href="contact-us.ejs">Contact Us</a></li>
+                            <li><a href="/views/users/login.ejs">Login</a></li>
+                            <li><a href="/signup.ejs">Signup</a></li>
+                            <li>
+                              <a href="privacy-policy.ejs">Privacy Policy</a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Main Menu End -->
+
+            <div class="col ms-location-block">
+              <div class="ms-location-menu">
+                <div class="ms-location-toggle">
+                  <img
+                    src="/assets/img/icons/location.svg"
+                    class="svg_img header_svg svg_loc"
+                    alt="icon"
+                  />
+                  <span
+                    class="ms-location-title d-1199 ms-location"
+                    id="ms_location"
+                  ></span>
+                  <i
+                    class="msicon msi-angle-down d-1199"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+                <div class="ms-location-content">
+                  <div class="ms-location-dropdown">
+                    <div class="row ms-location-wrapper">
+                      <ul class="loc-grid">
+                        <li class="loc-list current">
+                          <img
+                            src="/assets/img/icons/location.svg"
+                            class="svg_img header_svg svg_loc"
+                            alt="icon"
+                          /><span class="ms-detail-current"
+                            >current Location</span
+                          >
+                        </li>
+                        <li class="loc-list">
+                          <img
+                            src="/assets/img/icons/location.svg"
+                            class="svg_img header_svg svg_loc"
+                            alt="icon"
+                          /><span class="ms-detail">rajkot, in</span>
+                        </li>
+                        <li class="loc-list">
+                          <img
+                            src="/assets/img/icons/location.svg"
+                            class="svg_img header_svg svg_loc"
+                            alt="icon"
+                          /><span class="ms-detail">Mountain View, us</span>
+                        </li>
+                        <li class="loc-list">
+                          <img
+                            src="/assets/img/icons/location.svg"
+                            class="svg_img header_svg svg_loc"
+                            alt="icon"
+                          /><span class="ms-detail">Birmingham, UK</span>
+                        </li>
+                        <li class="loc-list">
+                          <img
+                            src="/assets/img/icons/location.svg"
+                            class="svg_img header_svg svg_loc"
+                            alt="icon"
+                          /><span class="ms-detail">Jakarta, id</span>
+                        </li>
+                        <li class="loc-list">
+                          <img
+                            src="/assets/img/icons/location.svg"
+                            class="svg_img header_svg svg_loc"
+                            alt="icon"
+                          /><span class="ms-detail">lima, pe</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Header menu End -->
+
+      <!-- Header responsive Bottom  Start -->
+      <div class="ms-header-bottom d-lg-none">
+        <div class="container position-relative">
+          <div class="row">
+            <div class="ms-flex">
+              <!-- Header Logo Start -->
+              <div class="col ms-header-logo">
+                <div class="header-logo">
+                  <a href="index-2.ejs">
+                    <img src="/assets/img/logo/logo.png" alt="Site Logo" />
+                  </a>
+                </div>
+              </div>
+              <!-- Header Logo End -->
+              <!-- Header menu Start -->
+              <a
+                href="javascript:void(0)"
+                class="ms-header-btn ms-site-menu-icon d-lg-none"
+              >
+                <img
+                  src="/assets/img/icons/menu.svg"
+                  class="svg_img"
+                  alt="menu"
+                />
+              </a>
+              <!-- Header menu End -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Header responsive Bottom  End -->
+    </header>
+    <!-- Header End  -->
+
+    <!-- Breadcrumb start -->
+    <div class="ms-breadcrumb m-b-30">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="row ms_breadcrumb_inner">
+              <div class="col-md-6 col-sm-12">
+                <h2 class="ms-breadcrumb-title">All Products</h2>
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <!-- ms-breadcrumb-list start -->
+                <ul class="ms-breadcrumb-list">
+                  <li class="ms-breadcrumb-item">
+                    <a href="/">Home</a>
+                  </li>
+                  <li class="ms-breadcrumb-item active">
+                    <a href="/products">All Products</a>
+                  </li>
+                  <li class="ms-breadcrumb-item active">
+                    <%=productInfo.productName%>
+                  </li>
+                </ul>
+                <!-- ms-breadcrumb-list end -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Breadcrumb end -->
+
+    <!-- Category section -->
+    <section class="ms-category ms-category-shop body-bg p-b-30">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12 border-content-color">
+            <div class="ms-category-block owl-carousel">
+              <div class="ms-cat-box ms-cat-box-1">
+                <a href="shop-left-sidebar-col-3.html" class="ms-cat-icon">
+                  <span class="ms-lbl">30%</span>
+                  <img
+                    src="/assets/img/icons/cat-1.svg"
+                    class="svg_img"
+                    alt="icon"
+                  />
+                  <h4 class="ms-cat-title">Fruits</h4>
+                  <p class="items">320 Items</p>
+                </a>
+              </div>
+              <div class="ms-cat-box ms-cat-box-2">
+                <a href="shop-left-sidebar-col-3.html" class="ms-cat-icon">
+                  <img
+                    src="/assets/img/icons/cat-2.svg"
+                    class="svg_img"
+                    alt="icon"
+                  />
+                  <h4 class="ms-cat-title">Bakery</h4>
+                  <p class="items">65 Items</p>
+                </a>
+              </div>
+              <div class="ms-cat-box ms-cat-box-3">
+                <a href="shop-left-sidebar-col-3.html" class="ms-cat-icon">
+                  <span class="ms-lbl">15%</span>
+                  <img
+                    src="/assets/img/icons/cat-3.svg"
+                    class="svg_img"
+                    alt="icon"
+                  />
+                  <h4 class="ms-cat-title">Vegetables</h4>
+                  <p class="items">548 Items</p>
+                </a>
+              </div>
+              <div class="ms-cat-box ms-cat-box-4">
+                <a href="shop-left-sidebar-col-3.html" class="ms-cat-icon">
+                  <span class="ms-lbl">10%</span>
+                  <img
+                    src="/assets/img/icons/cat-4.svg"
+                    class="svg_img"
+                    alt="icon"
+                  />
+                  <h4 class="ms-cat-title">Dairy & Milk</h4>
+                  <p class="items">48 Items</p>
+                </a>
+              </div>
+              <div class="ms-cat-box ms-cat-box-5">
+                <a href="shop-left-sidebar-col-3.html" class="ms-cat-icon">
+                  <img
+                    src="/assets/img/icons/cat-5.svg"
+                    class="svg_img"
+                    alt="icon"
+                  />
+                  <h4 class="ms-cat-title">Snack & Spice</h4>
+                  <p class="items">59 Items</p>
+                </a>
+              </div>
+              <div class="ms-cat-box ms-cat-box-6">
+                <a href="shop-left-sidebar-col-3.html" class="ms-cat-icon">
+                  <img
+                    src="/assets/img/icons/cat-6.svg"
+                    class="svg_img"
+                    alt="icon"
+                  />
+                  <h4 class="ms-cat-title">Juice & Drinks</h4>
+                  <p class="items">845 Items</p>
+                </a>
+              </div>
+              <div class="ms-cat-box ms-cat-box-7">
+                <a href="shop-left-sidebar-col-3.html" class="ms-cat-icon">
+                  <img
+                    src="/assets/img/icons/cat-7.svg"
+                    class="svg_img"
+                    alt="icon"
+                  />
+                  <h4 class="ms-cat-title">Seafood</h4>
+                  <p class="items">652 Items</p>
+                </a>
+              </div>
+              <div class="ms-cat-box ms-cat-box-8">
+                <a href="shop-left-sidebar-col-3.html" class="ms-cat-icon">
+                  <span class="ms-lbl">20%</span>
+                  <img
+                    src="/assets/img/icons/cat-8.svg"
+                    class="svg_img"
+                    alt="icon"
+                  />
+                  <h4 class="ms-cat-title">Fast Food</h4>
+                  <p class="items">253 Items</p>
+                </a>
+              </div>
+              <div class="ms-cat-box ms-cat-box-9">
+                <a href="shop-left-sidebar-col-3.html" class="ms-cat-icon">
+                  <img
+                    src="/assets/img/icons/cat-9.svg"
+                    class="svg_img"
+                    alt="icon"
+                  />
+                  <h4 class="ms-cat-title">Eggs</h4>
+                  <p class="items">154 Items</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Category section End -->
+
+    <!-- Sart Single Product -->
+    <section class="ms-single-product padding-b-30">
+      <div class="container">
+        <div class="row">
+          <div class="ms-pro-rightside ms-common-rightside col-md-12">
+            <!-- Single product content Start -->
+            <div class="single-pro-block">
+              <div class="single-pro-inner">
+                <div class="row">
+                  <div class="single-pro-img single-pro-img-no-sidebar">
+                    <div class="single-product-scroll">
+                      <div class="single-product-cover">
+                        <div class="single-slide zoom-image-hover">
+                          <img
+                            class="img-responsive"
+                            src="/assets/img/uploads/<%=productInfo.images[0]%>"
+                            alt=""
+                          />
+                        </div>
+                        <div class="single-slide zoom-image-hover">
+                          <img
+                            class="img-responsive"
+                            src="/assets/img/uploads/<%=productInfo.images[1]%>"
+                            alt=""
+                          />
+                        </div>
+                        <div class="single-slide zoom-image-hover">
+                          <img
+                            class="img-responsive"
+                            src="/assets/img/uploads/<%=productInfo.images[2]%>"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div class="single-nav-thumb">
+                        <div class="single-slide">
+                          <img
+                            class="img-responsive"
+                            src="/assets/img/uploads/<%=productInfo.images[0]%>"
+                            alt=""
+                          />
+                        </div>
+                        <div class="single-slide">
+                          <img
+                            class="img-responsive"
+                            src="/assets/img/uploads/<%=productInfo.images[1]%>"
+                            alt=""
+                          />
+                        </div>
+                        <div class="single-slide">
+                          <img
+                            class="img-responsive"
+                            src="/assets/img/uploads/<%=productInfo.images[2]%>"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="single-pro-desc single-pro-desc-no-sidebar m-t-991"
+                  >
+                    <div class="single-pro-content">
+                      <h5 class="ms-single-title">
+                        <%=productInfo.productName%>
+                      </h5>
+                      <div class="ms-single-rating-wrap">
+                        <div class="ms-single-rating">
+                          <i class="msicon msi-star fill"></i>
+                          <i class="msicon msi-star fill"></i>
+                          <i class="msicon msi-star fill"></i>
+                          <i class="msicon msi-star fill"></i>
+                          <i class="msicon msi-star-o"></i>
+                        </div>
+                        <span class="ms-read-review">
+                          |&nbsp;&nbsp;<a href="#ms-spt-nav-review"
+                            >992 Ratings</a
+                          >
+                        </span>
+                      </div>
+                      <div id="productQuantity">
+                        <p>Available:<%=productInfo.quantity%></p>
+                      </div>
+                      <div class="ms-single-price-stoke">
+                        <div class="ms-single-price">
+                          <div class="final-price">
+                            MRP:$<%=productInfo.price%>
+                          </div>
+                        </div>
+                        <div class="ms-single-stoke">
+                          <span class="ms-single-sku">SKU#: WH12</span>
+                          <span class="ms-single-ps-title">
+                            <% if(productInfo.isListed){%>
+                            <h5 style="color: green">IN STOCK</h5>
+                            <% }else{ %>
+                            <h5 style="color: red">OUT OF STOCK</h5>
+                            <% } %>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="ms-single-desc">
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1990.
+                      </div>
+
+                      <div class="ms-single-list">
+                        <ul>
+                          <li><strong>Closure :</strong> Hook & Loop</li>
+                          <li><strong>Sole :</strong> Polyvinyl Chloride</li>
+                          <li><strong>Width :</strong> Medium</li>
+                          <li>
+                            <strong>Outer Material :</strong> A-Grade Standard
+                            Quality
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="ms-pro-variation">
+                        <div
+                          class="ms-pro-variation-inner ms-pro-variation-size"
+                        >
+                          <span>Weight</span>
+                          <div class="ms-pro-variation-content">
+                            <ul>
+                              <li class="active"><span>250g</span></li>
+                              <li><span>500g</span></li>
+                              <li><span>1kg</span></li>
+                              <li><span>2kg</span></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <style>
+                        .decrease-btn {
+                          background-color: #dc3545;
+                          border-color: #dc3545;
+                        }
+
+                        .increase-btn {
+                          background-color: #28a745;
+                          border-color: #28a745;
+                        }
+
+                        .quantity {
+                          width: 50px;
+                          margin: 0 5px;
+                          text-align: center;
+                          font-size: 1rem;
+                          font-weight: bold;
+                        }
+
+                        .form-control[readonly] {
+                          background-color: #e9ecef;
+                          opacity: 1;
+                        }
+                      </style>
+                      <div class="ms-single-qty">
+                        <button
+                          id="increment"
+                          onclick="fnDecButton()"
+                          class="btn btn-danger btn-sm decrease-btn"
+                          type="button"
+                        >
+                          -
+                        </button>
+
+                        <input
+                          id="productQuantityToCart"
+                          class="quantity form-control"
+                          type="text"
+                          value="1"
+                        />
+
+                        <button
+                          id="decrement"
+                          onclick="fnIncButton('<%=maxValue%>')"
+                          class="btn btn-success btn-sm increase-btn"
+                          type="button"
+                        >
+                          +
+                        </button>
+                        <div class="ms-single-cart">
+                          <button
+                            class="btn btn-primary ms-btn-2"
+                            onclick="addToCart('<%=productInfo._id%>')"
+                          >
+                            Add To Cart
+                          </button>
+                        </div>
+                        <div class="ms-single-wishlist">
+                          <a class="ms-btn-group wishlist" title="Wishlist">
+                            <img
+                              src="assets/img/icons/wishlist.svg"
+                              class="svg_img pro_svg"
+                              alt=""
+                            />
+                          </a>
+                        </div>
+                        <div class="ms-single-quickview">
+                          <a
+                            href="#"
+                            class="ms-btn-group quickview"
+                            data-link-action="quickview"
+                            title="Quick view"
+                            data-bs-toggle="modal"
+                            data-bs-target="#ms_quickview_modal"
+                          >
+                            <img
+                              src="assets/img/icons/quickview.svg"
+                              class="svg_img pro_svg"
+                              alt=""
+                            />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Single product content End -->
+            <script>
+              async function fnDecButton() {
+                try {
+                  let cartValue = document.getElementById("productQuantityToCart");
+                  let currentValue = parseInt(cartValue.value);
+                  if (currentValue > 1) {
+                    cartValue.value = currentValue - 1;
+                  } else {
+                    await Swal.fire({
+                      title: "Oopssss!",
+                      text: "Minimum Limit Reached!",
+                      icon: "warning",
+                    });
+                  }
+                } catch (error) {
+                  console.log("Something Went Wrong",error);
+                }
+              }
+
+              async function fnIncButton(maxValue){
+                let cartValue = document.getElementById("productQuantityToCart");
+                let currentValue = parseInt(cartValue.value);
+                if(currentValue<maxValue){
+                  cartValue.value = currentValue + 1  
+                }else{
+                  await Swal.fire({
+                      title: "Oopssss!..",
+                      text: "Maximum Limit Reached!",
+                      icon: "warning",
+                    });
+                }
+              }
+
+              async function addToCart(id) {
+                console.log("coming to this function");
+                try {
+                  let response = await fetch(`/addToCart/${id}`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                  });
+                  let result = await response.json();
+
+                  if (result.success) {
+                    await Swal.fire({
+                      title: "Item Added To Cart",
+                      text: "Wish to browse more Product",
+                      icon: "success",
+                      showCancelButton: true,
+                      confirmButtonColor: "#3085d6",
+                      cancelButtonColor: "#d33",
+                      confirmButtonText: `Go To Cart`,
+                    }).then((result) => {
+                      if (result.isConfirmed) {
+                        window.location.href = "/cart";
+                      }
+                    });
+                  }
+                } catch (error) {
+                  console.log("something Went Wrong", error);
+                }
+              }
+            </script>
+
+            <!-- Single product tab start -->
+            <div class="ms-single-pro-tab">
+              <div class="ms-single-pro-tab-wrapper">
+                <div class="ms-single-pro-tab-nav">
+                  <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                      <a
+                        class="nav-link active"
+                        data-bs-toggle="tab"
+                        data-bs-target="#ms-spt-nav-details"
+                        role="tab"
+                        >Detail</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link"
+                        data-bs-toggle="tab"
+                        data-bs-target="#ms-spt-nav-info"
+                        role="tab"
+                        >Specifications</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link"
+                        data-bs-toggle="tab"
+                        data-bs-target="#ms-spt-nav-vendor"
+                        role="tab"
+                        >Vendor</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link"
+                        data-bs-toggle="tab"
+                        data-bs-target="#ms-spt-nav-review"
+                        role="tab"
+                        >Reviews</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="tab-content ms-single-pro-tab-content">
+                  <div
+                    id="ms-spt-nav-details"
+                    class="tab-pane fade show active"
+                  >
+                    <div class="ms-single-pro-tab-desc">
+                      <p>
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and
+                        scrambled it to make a type specimen book. It has
+                        survived not only five centuries, but also the leap into
+                        electronic typesetting, remaining essentially unchanged.
+                      </p>
+                      <ul>
+                        <li>
+                          Any Product types that You want - Simple, Configurable
+                        </li>
+                        <li>Downloadable/Digital Products, Virtual Products</li>
+                        <li>Inventory Management with Backordered items</li>
+                        <li>Flatlock seams throughout.</li>
+                      </ul>
+                      <p>
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and
+                        scrambled it to make a type specimen book. It has
+                        survived not only five centuries, but also the leap into
+                        electronic typesetting, remaining essentially unchanged.
+                      </p>
+                      <p>
+                        There are many variations of passages of Lorem Ipsum
+                        available, but the majority have suffered alteration in
+                        some form, by injected humour, or randomised words which
+                        don't look even slightly believable. If you are going to
+                        use a passage of Lorem Ipsum, you need to be sure there
+                        isn't anything embarrassing hidden in the middle of
+                        text. All the Lorem Ipsum generators on the Internet
+                        tend to repeat predefined chunks as necessary, making
+                        this the first true generator on the Internet. It uses a
+                        dictionary of over 200 Latin words, combined with a
+                        handful of model sentence structures, to generate Lorem
+                        Ipsum which looks reasonable. The generated Lorem Ipsum
+                        is therefore always free from repetition, injected
+                        humour, or non-characteristic words etc.
+                      </p>
+                    </div>
+                  </div>
+                  <div id="ms-spt-nav-info" class="tab-pane fade">
+                    <div class="ms-single-pro-tab-moreinfo">
+                      <p>
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and
+                        scrambled it to make a type specimen book. It has
+                        survived not only five centuries.
+                      </p>
+                      <ul>
+                        <li><span>Model</span> SKU140</li>
+                        <li><span>Weight</span> 500 g</li>
+                        <li><span>Dimensions</span> 35 × 30 × 7 cm</li>
+                        <li><span>Color</span> Black, Pink, Red, White</li>
+                        <li><span>Size</span> 10 X 20</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div id="ms-spt-nav-vendor" class="tab-pane fade">
+                    <div class="ms-single-pro-tab-moreinfo">
+                      <div class="ms-product-vendor">
+                        <div class="ms-vendor-info">
+                          <span>
+                            <img src="assets/img/vendor/3.jpg" alt="vendor" />
+                          </span>
+                          <div>
+                            <h5>Ocean Crate</h5>
+                            <p>Products : 358</p>
+                            <p>Sales : 5587</p>
+                          </div>
+                        </div>
+                        <div class="ms-detail">
+                          <ul>
+                            <li><span>Phone No. :</span> +00 987654321</li>
+                            <li><span>Email. :</span> Example@gmail.com</li>
+                            <li>
+                              <span>Address. :</span> 2548 Broaddus Maple Court,
+                              Madisonville KY 4783, USA.
+                            </li>
+                          </ul>
+                          <p>
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and
+                            scrambled it to make a type specimen book. It has
+                            survived not only five centuries, but also the leap
+                            into electronic typesetting, remaining essentially
+                            unchanged.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="ms-spt-nav-review" class="tab-pane fade">
+                    <div class="row">
+                      <div class="ms-t-review-wrapper">
+                        <div class="ms-t-review-item">
+                          <div class="ms-t-review-avtar">
+                            <img src="assets/img/user/1.jpg" alt="user" />
+                          </div>
+                          <div class="ms-t-review-content">
+                            <div class="ms-t-review-top">
+                              <div class="ms-t-review-name">Mariya Lykra</div>
+                              <div class="ms-t-review-rating">
+                                <i class="msicon msi-star fill"></i>
+                                <i class="msicon msi-star fill"></i>
+                                <i class="msicon msi-star fill"></i>
+                                <i class="msicon msi-star fill"></i>
+                                <i class="msicon msi-star-o"></i>
+                              </div>
+                            </div>
+                            <div class="ms-t-review-bottom">
+                              <p>
+                                Lorem Ipsum is simply dummy text of the printing
+                                and typesetting industry. Lorem Ipsum has been
+                                the industry's standard dummy text ever since
+                                the 1500s, when an unknown printer took a galley
+                                of type and scrambled it to make a type
+                                specimen.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ms-t-review-item">
+                          <div class="ms-t-review-avtar">
+                            <img src="assets/img/user/2.jpg" alt="user" />
+                          </div>
+                          <div class="ms-t-review-content">
+                            <div class="ms-t-review-top">
+                              <div class="ms-t-review-name">Moris Willson</div>
+                              <div class="ms-t-review-rating">
+                                <i class="msicon msi-star fill"></i>
+                                <i class="msicon msi-star fill"></i>
+                                <i class="msicon msi-star fill"></i>
+                                <i class="msicon msi-star-o"></i>
+                                <i class="msicon msi-star-o"></i>
+                              </div>
+                            </div>
+                            <div class="ms-t-review-bottom">
+                              <p>
+                                Lorem Ipsum has been the industry's standard
+                                dummy text ever since the 1500s, when an unknown
+                                printer took a galley of type and scrambled it
+                                to make a type specimen.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="ms-ratting-content">
+                        <h3>Add a Review</h3>
+                        <div class="ms-ratting-form">
+                          <form action="#">
+                            <div class="ms-ratting-star">
+                              <span>Your rating:</span>
+                              <div class="ms-t-review-rating">
+                                <i class="msicon msi-star fill"></i>
+                                <i class="msicon msi-star fill"></i>
+                                <i class="msicon msi-star-o"></i>
+                                <i class="msicon msi-star-o"></i>
+                                <i class="msicon msi-star-o"></i>
+                              </div>
+                            </div>
+                            <div class="ms-ratting-input">
+                              <input
+                                name="your-name"
+                                placeholder="Name"
+                                type="text"
+                              />
+                            </div>
+                            <div class="ms-ratting-input">
+                              <input
+                                name="your-email"
+                                placeholder="Email*"
+                                type="email"
+                                required
+                              />
+                            </div>
+                            <div class="ms-ratting-input form-submit">
+                              <textarea
+                                name="your-commemt"
+                                placeholder="Enter Your Comment"
+                              ></textarea>
+                              <button
+                                class="ms-btn-2"
+                                type="submit"
+                                value="Submit"
+                              >
+                                Submit
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- product details description area end -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Single Product -->
+
+    <!-- Footer Start -->
+    <footer class="ms-footer m-t-30">
+      <div class="footer-container">
+        <div class="footer-top padding-tb-60">
+          <div class="container">
+            <div class="row m-minus-991">
+              <div class="col-sm-12 col-lg-3 ms-footer-cat">
+                <div class="ms-footer-widget ms-footer-company">
+                  <img
+                    src="/assets/img/logo/footer-logo.png"
+                    class="ms-footer-logo"
+                    alt="footer logo"
+                  />
+                  <p class="ms-footer-detail">
+                    Cake Cart is the Biggest Cake destination that you can get.
+                  </p>
+                  <div class="ms-app-store">
+                    <a href="#" class="app-img"
+                      ><img
+                        src="/assets/img/app/android.png"
+                        class="adroid"
+                        alt="apple"
+                    /></a>
+                    <a href="#" class="app-img"
+                      ><img
+                        src="/assets/img/app/apple.png"
+                        class="apple"
+                        alt="apple"
+                    /></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-2 ms-footer-info">
+                <div class="ms-footer-widget">
+                  <h4 class="ms-footer-heading">Category</h4>
+                  <div class="ms-footer-links ms-footer-dropdown">
+                    <ul class="align-items-center">
+                      <li class="ms-footer-link">
+                        <a href="shop-left-sidebar-col-3.html">Dairy & Milk</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="shop-banner-left-sidebar-col-3.html"
+                          >Snack & Spice</a
+                        >
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="shop-full-width-col-5.html">Fast Food</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="shop-list-left-sidebar.html">Juice & Drinks</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="shop-list-full-col-2.html">Bakery</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="shop-banner-right-sidebar-col-4.html"
+                          >Seafood</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-2 ms-footer-account">
+                <div class="ms-footer-widget">
+                  <h4 class="ms-footer-heading">Company</h4>
+                  <div class="ms-footer-links ms-footer-dropdown">
+                    <ul class="align-items-center">
+                      <li class="ms-footer-link">
+                        <a href="about-us.html">About us</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="track-order.html">Delivery</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="privacy-policy.html">Legal Notice</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="terms-condition.html">Terms & conditions</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="checkout.html">Secure payment</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="contact-us.html">Contact us</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-2 ms-footer-service">
+                <div class="ms-footer-widget">
+                  <h4 class="ms-footer-heading">Account</h4>
+                  <div class="ms-footer-links ms-footer-dropdown">
+                    <ul class="align-items-center">
+                      <li class="ms-footer-link">
+                        <a href="register.html">Sign In</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="cart.html">View Cart</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="privacy-policy.html">Return Policy</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="#">Become a Vendor</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="#">Affiliate Program</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="checkout.html">Payments</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-3 ms-footer-cont-social">
+                <div class="ms-footer-contact">
+                  <div class="ms-footer-widget">
+                    <h4 class="ms-footer-heading">Contact</h4>
+                    <div class="ms-footer-links ms-footer-dropdown">
+                      <ul class="align-items-center">
+                        <li class="ms-footer-link ms-foo-location">
+                          <span
+                            ><img
+                              src="/assets/img/icons/foo-location.svg"
+                              class="svg_img foo_svg"
+                              alt=""
+                          /></span>
+                          <p>
+                            2548 Broaddus Maple Court, Madisonville KY 4783,
+                            USA.
+                          </p>
+                        </li>
+                        <li class="ms-footer-link ms-foo-call">
+                          <span
+                            ><img
+                              src="/assets/img/icons/foo-wp.svg"
+                              class="svg_img foo_svg"
+                              alt="" /></span
+                          ><a href="tel:+009876543210">+00 9876543210</a>
+                        </li>
+                        <li class="ms-footer-link ms-foo-mail">
+                          <span
+                            ><img
+                              src="/assets/img/icons/foo-mail.svg"
+                              class="svg_img foo_svg"
+                              alt="" /></span
+                          ><a href="mailto:example@email.com"
+                            >example@email.com</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="ms-footer-social">
+                  <div class="ms-footer-widget">
+                    <div class="ms-footer-links ms-footer-dropdown">
+                      <ul class="align-items-center">
+                        <li class="ms-footer-link">
+                          <a href="#"
+                            ><i
+                              class="msicon msi-instagram"
+                              aria-hidden="true"
+                            ></i
+                          ></a>
+                        </li>
+                        <li class="ms-footer-link">
+                          <a href="#"
+                            ><i
+                              class="msicon msi-twitter-square"
+                              aria-hidden="true"
+                            ></i
+                          ></a>
+                        </li>
+                        <li class="ms-footer-link">
+                          <a href="#"
+                            ><i
+                              class="msicon msi-facebook-square"
+                              aria-hidden="true"
+                            ></i
+                          ></a>
+                        </li>
+                        <li class="ms-footer-link">
+                          <a href="#"
+                            ><i
+                              class="msicon msi-linkedin-square"
+                              aria-hidden="true"
+                            ></i
+                          ></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="container">
+            <div class="row">
+              <div class="ms-bottom-info">
+                <!-- Footer Copyright Start -->
+                <div class="footer-copy">
+                  <div class="footer-bottom-copy">
+                    <div class="ms-copy">
+                      Copyright ©
+                      <a class="site-name" href="index-2.html">Masterkart</a>
+                      all rights reserved. Powered by Masterkart.
+                    </div>
+                  </div>
+                </div>
+                <!-- Footer Copyright End -->
+                <!-- Footer payment -->
+                <div class="footer-bottom-right">
+                  <div
+                    class="footer-bottom-payment d-flex justify-content-center"
+                  >
+                    <div class="payment-link">
+                      <img
+                        src="/assets/img/hero-bg/payment.png"
+                        alt="payment"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!-- Footer payment -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Area End -->
+
+    <!-- Add to Cart Notify -->
+    <div class="ms-cart-notify">
+      <a href="javascript:void(0)" class="ms-cart-toggle"
+        ><img
+          src="/assets/img/icons/pro_cart.svg"
+          class="svg_img"
+          alt="cart"
+        /><span>3</span></a
+      >
+    </div>
+
+    <!-- Add to Wishlist Notify  -->
+    <div class="ms-wish-notify"></div>
+
+    <!-- Add to Compare list Notify  -->
+    <div class="ms-compare-notify"></div>
+
+    <!-- Back to top  -->
+    <a class="ms-back-to-top"></a>
+
+    <!-- Features sidebar  -->
+    <div class="ms-features-sidebar-overlay"></div>
+    <div class="ms-features-sidebar">
+      <div class="tool-title">
+        <h3>Features</h3>
+      </div>
+      <a href="#" class="ms-tools-sidebar-toggle open-features">
+        <img alt="icon" src="/assets/img/icons/setting.svg" class="svg_img" />
+      </a>
+      <div class="ms-features-block">
+        <div class="ms-features-title">Colors</div>
+        <ul class="bg-panel ms-change-color">
+          <li class="active" data-color="01">
+            <a href="javascript:void(0)" class="colorcode1"></a>
+          </li>
+          <li data-color="02">
+            <a href="javascript:void(0)" class="colorcode2"></a>
+          </li>
+          <li data-color="03">
+            <a href="javascript:void(0)" class="colorcode3"></a>
+          </li>
+          <li data-color="04">
+            <a href="javascript:void(0)" class="colorcode4"></a>
+          </li>
+          <li data-color="05">
+            <a href="javascript:void(0)" class="colorcode5"></a>
+          </li>
+          <li data-color="06">
+            <a href="javascript:void(0)" class="colorcode6"></a>
+          </li>
+          <li data-color="07">
+            <a href="javascript:void(0)" class="colorcode7"></a>
+          </li>
+          <li data-color="08">
+            <a href="javascript:void(0)" class="colorcode8"></a>
+          </li>
+          <li data-color="09">
+            <a href="javascript:void(0)" class="colorcode9"></a>
+          </li>
+        </ul>
+      </div>
+      <div class="ms-features-block">
+        <div class="ms-tools-sidebar-content">
+          <div class="ms-features-title">Dark mode</div>
+          <div class="ms-change-mode" id="ms-change-mode">
+            <div class="ms-mode-switch">
+              <div class="ms-mode-btn">Mode</div>
+              <div class="ms-mode-on">On</div>
+              <div class="ms-mode-off">Off</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plugins JS -->
+    <script src="/assets/js/plugins/jquery-3.5.1.min.js"></script>
+    <script src="/assets/js/plugins/popper.min.js"></script>
+    <script src="/assets/js/plugins/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/plugins/bootstrap-select.min.js"></script>
+    <script src="/assets/js/plugins/fontawesome.js"></script>
+    <script src="/assets/js/plugins/owl.carousel.min.js"></script>
+    <script src="/assets/js/plugins/swiper-bundle.min.js"></script>
+    <script src="/assets/js/plugins/infiniteslidev2.js"></script>
+    <script src="/assets/js/plugins/jquery.zoom.min.js"></script>
+    <script src="/assets/js/plugins/slick.min.js"></script>
+    <script src="/assets/js/plugins/nouislider.js"></script>
+
+    <!-- Main Js -->
+    <script src="/assets/js/main.js"></script>
+  </body>
+
+  <!-- Mirrored from maraviyainfotech.com/wrapbootstrap/masterkart-html/masterkart-html/shop-full-width.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Mar 2024 10:02:16 GMT -->
+</html>

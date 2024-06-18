@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<ejs lang="en">
+  <!-- Mirrored from maraviyainfotech.com/wrapbootstrap/masterkart-html/masterkart-html/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Mar 2024 10:01:07 GMT -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+
+    <title>Cake Cart</title>
+    <meta
+      name="keywords"
+      content="Bootstrap 5.x, ecommerce, farming, food market, grocery market, grocery shop, grocery store, grocery supper market, multi vendor, organic food, supermarket, supermarket grocery"
+    />
+    <meta name="description" content="Multipurpose eCommerce ejs Template" />
+    <meta name="author" content="ashishmaraviya" />
+
+    <!-- site Favicon -->
+    <link rel="icon" href="assets/img/favicon/favicon.png" sizes="32x32" />
+
+    <!-- css Icon Font -->
+    <link rel="stylesheet" href="assets/css/vendor/msicons.min.css" />
+
+    <!-- css All Plugins Files -->
+    <link rel="stylesheet" href="assets/css/plugins/animate.css" />
+    <link rel="stylesheet" href="assets/css/plugins/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/bootstrap.css" />
+    <link rel="stylesheet" href="assets/css/plugins/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/owl.carousel.min.css" />
+    <link
+      rel="stylesheet"
+      href="assets/css/plugins/owl.theme.default.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/plugins/slick.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/nouislider.css" />
+
+    <!-- sweetalert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Main Style -->
+    <link rel="stylesheet" id="main_style" href="assets/css/demo-1.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+  </head>
+
+  <body>
+
+    <!-- Header start  -->
+    <header class="ms-header">
+      <!-- Header Top Start -->
+
+      <!-- Header Bottom  Start -->
+      <div class="ms-header-bottom d-none d-lg-block">
+        <div class="container position-relative">
+          <div class="row">
+            <div class="ms-flex">
+              <!-- Header Logo Start -->
+              <div class="align-self-center ms-header-logo">
+                <div class="header-logo">
+                  <a href="index-2.ejs"
+                    ><img src="assets/img/logo/logo.png" alt="Site Logo"
+                  /></a>
+                </div>
+              </div>
+              <!-- Header Logo End -->
+
+              <!-- Header Search Start -->
+              <div class="align-self-center ms-header-search">
+                <div class="header-search">
+                  <form class="ms-search-group-form" action="#">
+                    <input
+                      class="form-control ms-search-bar"
+                      placeholder="Search Products..."
+                      type="text"
+                    />
+                    <button class="search_submit" type="submit">
+                      <img
+                        src="assets/img/icons/search.svg"
+                        class="svg_img search_svg"
+                        alt=""
+                      />
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <!-- Header Search End -->
+
+              <!-- Header Button Start -->
+              <div class="align-self-center">
+                <div class="ms-header-bottons">
+                  <!-- Header User Start -->
+                  
+                  <% if(islogin==true){ %>
+                    <div class="ms-acc-drop">
+                      <a
+                        href="javascript:void(0)"
+                        class="ms-header-btn ms-header-user dropdown-toggle ms-user-toggle"
+                        title="Account"
+                      >
+                        <div class="header-icon">
+                          <img
+                            src="assets/img/icons/user.svg"
+                            class="svg_img header_svg"
+                            alt=""
+                          />
+                        </div>
+                        <div class="ms-btn-desc">
+                          <span class="ms-btn-title">Account</span>
+                          <span class="ms-btn-stitle">Log-Out</span>
+                        </div>
+                      </a>
+                      <ul class="ms-dropdown-menu">
+                        <li>
+                          <a class="dropdown-item" href="/myAccount"
+                            >My Account</a
+                          >
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="/views/users/logout"
+                            >Log-Out</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                    
+                  <% }else{ %>
+                    <div class="ms-acc-drop">
+                      <a
+                        href="javascript:void(0)"
+                        class="ms-header-btn ms-header-user dropdown-toggle ms-user-toggle"
+                        title="Account"
+                      >
+                        <div class="header-icon">
+                          <img
+                            src="assets/img/icons/user.svg"
+                            class="svg_img header_svg"
+                            alt=""
+                          />
+                        </div>
+                        <div class="ms-btn-desc">
+                          <span class="ms-btn-stitle">Login</span>
+                        </div>
+                      </a>
+                      <ul class="ms-dropdown-menu">
+                        <li>
+                          <a class="dropdown-item" href="/signup"
+                            >Signup</a
+                          >
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="/views/users/login"
+                            >Login</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  <% } %>
+                  <!-- Header User End -->
+                  <!-- Header wishlist Start -->
+                  <a
+                    href="javascript:void(0)"
+                    class="ms-header-btn ms-wish-toggle"
+                    title="Wishlist"
+                  >
+                    <div class="header-icon">
+                      <img
+                        src="assets/img/icons/wishlist.svg"
+                        class="svg_img header_svg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="ms-btn-desc">
+                      <span class="ms-btn-title">Wishlist</span>
+                      <span class="ms-btn-stitle"
+                        ><b class="ms-wishlist-count">3</b>-items</span
+                      >
+                    </div>
+                  </a>
+                  <!-- Header wishlist End -->
+                  <!-- Header Cart Start -->
+                  <a
+                    href="javascript:void(0)"
+                    class="ms-header-btn ms-cart-toggle"
+                    title="Cart"
+                  >
+                    <div class="header-icon">
+                      <img
+                        src="assets/img/icons/cart_5.svg"
+                        class="svg_img header_svg"
+                        alt=""
+                      />
+                      <span class="main-label-note-new"></span>
+                    </div>
+                    <div class="ms-btn-desc">
+                      <span class="ms-btn-title">Cart</span>
+                      <span class="ms-btn-stitle"
+                        ><b class="ms-cart-count">3</b>-items</span
+                      >
+                    </div>
+                  </a>
+                  <!-- Header Cart End -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Header Button End -->
+      
+
+      <!-- Header menu -->
+      <div class="ms-header-cat d-none d-lg-block">
+        <div class="container position-relative">
+          <div class="row justify-content-between">
+            <!-- Category Toggle -->
+            <div class="col ms-category-icon-block">
+              <div class="ms-category-menu">
+                <div class="ms-category-toggle">
+                  <img
+                    src="assets/img/icons/category-icon.svg"
+                    class="svg_img header_svg svg_cat"
+                    alt="icon"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Main Menu Start -->
+            <div id="ms-main-menu-desk" class="d-none d-lg-block sticky-nav">
+              <div class="position-relative nav-desk">
+                <div class="row">
+                  <div class="col-md-12 align-self-center">
+                    <div class="ms-main-menu">
+                      <ul>
+                        <li class="non-drop">
+                          <a href="homePage.ejs">Home</a>
+                        </li>
+                        <li class="dropdown drop-list">
+                          <a href="/products" class="dropdown-arrow">Products</a>
+                        </li>
+                        <li class="dropdown drop-list">
+                          <a href="javascript:void(0)" class="dropdown-arrow"
+                            >Others<i class="msicon msi-angle-right"></i
+                          ></a>
+                          <ul class="sub-menu">
+                            <li><a href="about-us.ejs">About Us</a></li>
+                            <li><a href="contact-us.ejs">Contact Us</a></li>
+                            <li><a href="/views/users/login.ejs">Login</a></li>
+                            <li><a href="/signup">Signup</a></li>
+                            <li><a href="privacy-policy.ejs">Privacy Policy</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Main Menu End -->
+
+            <div class="col ms-location-block">
+              <div class="ms-location-menu">
+                <div class="ms-location-toggle">
+                  <img
+                    src="assets/img/icons/location.svg"
+                    class="svg_img header_svg svg_loc"
+                    alt="icon"
+                  />
+                  <span
+                    class="ms-location-title d-1199 ms-location"
+                    id="ms_location"
+                  ></span>
+                  <i
+                    class="msicon msi-angle-down d-1199"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+                <div class="ms-location-content">
+                  <div class="ms-location-dropdown">
+                    <div class="row ms-location-wrapper">
+                      <ul class="loc-grid">
+                        <li class="loc-list current">
+                          <img
+                            src="assets/img/icons/location.svg"
+                            class="svg_img header_svg svg_loc"
+                            alt="icon"
+                          /><span class="ms-detail-current"
+                            >current Location</span
+                          >
+                        </li>
+                        <li class="loc-list">
+                          <img
+                            src="assets/img/icons/location.svg"
+                            class="svg_img header_svg svg_loc"
+                            alt="icon"
+                          /><span class="ms-detail">rajkot, in</span>
+                        </li>
+                        <li class="loc-list">
+                          <img
+                            src="assets/img/icons/location.svg"
+                            class="svg_img header_svg svg_loc"
+                            alt="icon"
+                          /><span class="ms-detail">Mountain View, us</span>
+                        </li>
+                        <li class="loc-list">
+                          <img
+                            src="assets/img/icons/location.svg"
+                            class="svg_img header_svg svg_loc"
+                            alt="icon"
+                          /><span class="ms-detail">Birmingham, UK</span>
+                        </li>
+                        <li class="loc-list">
+                          <img
+                            src="assets/img/icons/location.svg"
+                            class="svg_img header_svg svg_loc"
+                            alt="icon"
+                          /><span class="ms-detail">Jakarta, id</span>
+                        </li>
+                        <li class="loc-list">
+                          <img
+                            src="assets/img/icons/location.svg"
+                            class="svg_img header_svg svg_loc"
+                            alt="icon"
+                          /><span class="ms-detail">lima, pe</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Header menu End -->
+
+
+      <!-- Header responsive Bottom  Start -->
+      <div class="ms-header-bottom d-lg-none">
+        <div class="container position-relative">
+          <div class="row">
+            <div class="ms-flex">
+              <!-- Header Logo Start -->
+              <div class="col ms-header-logo">
+                <div class="header-logo">
+                  <a href="index-2.ejs">
+                    <img src="assets/img/logo/logo.png" alt="Site Logo" />
+                  </a>
+                </div>
+              </div>
+              <!-- Header Logo End -->
+              <!-- Header menu Start -->
+              <a
+                href="javascript:void(0)"
+                class="ms-header-btn ms-site-menu-icon d-lg-none"
+              >
+                <img
+                  src="assets/img/icons/menu.svg"
+                  class="svg_img"
+                  alt="menu"
+                />
+              </a>
+              <!-- Header menu End -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Header responsive Bottom  End -->
+    </header>
+    <!-- Header End  -->
+
+    <!-- Cart sidebar Start -->
+    <% if (islogin==true) {%>
+    <div class="ms-side-cart-overlay"></div>
+    <div id="ms-side-cart" class="ms-side-cart">
+        <div class="ms-cart-inner">
+            <div class="ms-cart-top">
+                <div class="ms-cart-title">
+                    <span class="cart_title">My Cart</span>
+                    <a href="javascript:void(0)" class="ms-cart-close"><img src="assets/img/icons/close.svg"
+                            class="svg_img pro_svg" alt="close"></a>
+                </div>
+                <ul class="ms-cart-pro-items">
+                  <% for( let i = 0; i < usersCartData.length; i++ ) { %>
+                    <li>
+                      <a href="/singleProduct?id=<%=usersCartData[i]?.productId%>" class="ms-pro-img"><img
+                              src="/assets/img/uploads/<%=usersCartData[i]?.productId?.images[0]%>" alt="product"></a>
+                      <div class="ms-pro-content">
+                          <a href="product-left-sidebar.html" class="cart-pro-title"><%=usersCartData[i]?.productId?.productName%></a>
+                          <span class="cart-price"><span><%=usersCartData[i]?.productId?.price%></span>x<%=usersCartData[i]?.productQuantity%></span>
+                        <button onclick="deleteItem('<%=usersCartData[i]._id%>')" class="remove">×</button>
+                      </div>
+                  </li>
+                  <% } %>
+                </ul>
+            </div>
+            <div class="ms-cart-bottom">
+                <div class="cart-sub-total">
+                    <table class="table cart-table">
+                        <tbody>
+                            <tr>
+                                <td class="text-left">Total :</td>
+                                <td class="text-right primary-color">$<%=wholeTotal%></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="cart_btn">
+                    <a href="/cart" class="ms-btn-1">View Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% } %>
+    <script>
+      async function deleteItem(id) {
+                      console.log("coming to the delete function");
+                      try {
+                        await Swal.fire({
+                          title: "Are you sure?",
+                          text: "You want to delete this!",
+                          icon: "warning",
+                          showCancelButton: true,
+                          confirmButtonColor: "#3085d6",
+                          cancelButtonColor: "#d33",
+                          confirmButtonText: "Yes, delete it!",
+                        }).then(async (result) => {
+                          if (result.isConfirmed) {
+                            let response = await fetch(`/deleteCart/${id}`, {
+                              method: "POST",
+                              headers: { "Content-Type": "application/json" },
+                            });
+                            let res = await response.json();
+                            console.log(res);
+                            if (res.success) {
+                              Swal.fire({
+                                title: "Deleted!",
+                                text: "Your file has been deleted.",
+                                icon: "success",
+                                confirmButtonColor: "#3085d6",
+                                cancelButtonColor: "#d33",
+                                confirmButtonText: "Successfully deleted ",
+                              }).then((result) => {
+                                if (result.isConfirmed)
+                                  window.location.reload();
+                              });
+                            }
+                          }
+                        });
+
+                        // console.log(result);
+                      } catch (error) {
+                        console.log("something Went Wrong", error);
+                      }
+                    }
+    </script>
+    <!-- Cart sidebar End -->
+
+    <!-- Wishlist sidebar Start -->
+    <% if(islogin==true){ %>
+      <div class="ms-side-wish-overlay"></div>
+      <div id="ms-side-wish" class="ms-side-wish">
+          <div class="ms-wish-inner">
+              <div class="ms-wish-top">
+                  <div class="ms-wish-title">
+                      <span class="wish_title">My Wishlist</span>
+                      <button ><a href="/wishList">Go To Wishlist</a></button>
+                      <a href="javascript:void(0)" class="ms-wish-close"><img src="assets/img/icons/close.svg"
+                              class="svg_img pro_svg" alt="close"></a>
+                  </div>
+                  <ul class="ms-wish-pro-items">
+                    <% for( let i = 0; i < wishListItems.length; i++ ) { %>
+                      <li>
+                        <a href="product-left-sidebar.html" class="ms-pro-img"><img
+                                src="/assets/img/uploads/<%=wishListItems[i].productId.images[0]%>" alt="product"></a>
+                        <div class="ms-pro-content">
+                            <a href="product-left-sidebar.html" class="wish-pro-title"><%=wishListItems[i].productId.productName%></a>
+                            <span class="wish-price"><span>$<%=wishListItems[i].productId.price%></span> x 1 kg</span>
+                            <div class="ms-availability">
+                              <% if(wishListItems[i].productId.isListed){%>
+                                <p class="stock avail">In Stock</p>
+                                <% }else{ %>
+                                  <p class="stock avail">Out Of Stock</p>
+                                <% } %>
+                                <a onclick="itemToCart('<%=wishListItems[i].productId%>')" class="ms-btn-2">Add to cart</a>
+                            </div>
+                            <a href="javascript:void(0)" onclick="wishlistRemover('<%=wishListItems[i]._id%>')" class="remove">×</a>
+                        </div>
+                    </li>
+                    <% } %>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <script>
+        async function itemToCart(id) {
+                  try {
+                    let response = await fetch(`/addToCart/${id}`, {
+                      method: "POST",
+                      headers: { "Content-Type": "application/json" },
+                    });
+                    let result = await response.json();
+  
+                    if (result.success) {
+                      await Swal.fire({
+                        title: "Item Added To Cart",
+                        text: "Wish to browse more Product",
+                        icon: "success",
+                        showCancelButton: true,
+                        confirmButtonColor: "#3085d6",
+                        cancelButtonColor: "#d33",
+                        confirmButtonText: `Go To Cart`,
+                      }).then((result) => {
+                        if (result.isConfirmed) {
+                          window.location.href = "/cart";
+                        }
+                      });
+                    }
+                  } catch (error) {
+                    console.log("something Went Wrong", error);
+                  }
+                }
+
+                async function wishlistRemover(item){
+                  try {
+                    let response = await fetch(`/removeFromWishList/${item}`, {
+                      method: "GET",
+                      headers: { "Content-Type": "application/json" },
+                    });
+                    let result = await response.json();
+
+                    if(result.success){
+                     await Swal.fire({
+                        title: "Done",
+                        text: "Item removed from WishList",
+                        icon: "success"
+                      });
+                      window.location.reload()
+                    }
+                  } catch (error) {
+                    console.log("Something Went wrong",error)
+                  }
+                }
+      </script>
+      <% } %>
+      <!-- Wishlist sidebar End -->
+
+    <!-- Hero Slider Start -->
+    <section class="section ms-hero m-t-30">
+      <div class="container">
+        <div class="ms-main-content">
+          <!-- Hero Slider Start -->
+          <div class="ms-slider-content">
+            <div class="ms-main-slider">
+              <div
+                class="ms-slider swiper-container main-slider-nav main-slider-dot"
+              >
+                <!-- Main slider  -->
+                <div class="swiper-wrapper">
+                  <div class="ms-slide-item swiper-slide d-flex slide-1">
+                    <div class="ms-slide-content slider-animation">
+                      <h2 class="ms-slide-stitle">Cold and Sweet</h2>
+                      <h1 class="ms-slide-title">Cakes and Ice creams</h1>
+                      <div class="ms-slide-desc">
+                        <p>starting at ₹ <b>550</b>.00</p>
+                        <a href="/products" class="ms-btn-2"
+                          >Shop Now
+                          <i
+                            class="msicon msi-angle-double-right"
+                            aria-hidden="true"
+                          ></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="ms-slide-item swiper-slide d-flex slide-2">
+                    <div class="ms-slide-content slider-animation">
+                      <h2 class="ms-slide-stitle">Home Made</h2>
+                      <h1 class="ms-slide-title">Freshy and Creamy</h1>
+                      <div class="ms-slide-desc">
+                        <p>starting at ₹ <b>500</b>.00</p>
+                        <a href="/products" class="ms-btn-2"
+                          >Shop Now
+                          <i
+                            class="msicon msi-angle-double-right"
+                            aria-hidden="true"
+                          ></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination swiper-pagination-white"></div>
+                <div class="swiper-buttons">
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Hero Banner 1 Start -->
+          <div class="ms-banner-content align-self-center">
+            <div class="ms-slider-grid-item grid-img-4">
+              <div class="ms-detail">
+                <p>Fresh Cream</p>
+                <h6 class="grid-animation">
+                  <span class="ms-grid-sub-title">Ice Creams</span>
+                </h6>
+                <a href="/products" class="ms-btn-2"
+                  >Shop Now
+                  <i
+                    class="msicon msi-angle-double-right"
+                    aria-hidden="true"
+                  ></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <!-- Hero Banner 2 Start -->
+          <div class="ms-banner-content align-self-center">
+            <div class="ms-slider-grid-item grid-img-5">
+              <div class="ms-detail">
+                <p>Home Made</p>
+                <h6 class="grid-animation">
+                  <span class="ms-grid-sub-title">Cakes</span>
+                </h6>
+                <a href="/products" class="ms-btn-2"
+                  >Shop Now
+                  <i
+                    class="msicon msi-angle-double-right"
+                    aria-hidden="true"
+                  ></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero Slider End -->
+
+    <!-- New Product tab Area Start -->
+    <section class="ms-product-tab padding-tb-30">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-title">
+              <h2>Our <span> Category</span></h2>
+            </div>
+          </div>
+
+          <!-- Tab Start -->
+          <div class="col-md-12 ms-pro-tab">
+            <ul class="ms-pro-tab-nav nav justify-content-end">
+              <% for(let i=0;i<categoryInfo.length;i++){ %>
+              <li class="nav-item">
+                <a class="nav-link active" href="/products"
+                  ><%=categoryInfo[i].categoryName%></a
+                >
+              </li>
+              <% } %>
+            </ul>
+          </div>
+          <!-- Tab End -->
+        </div>
+        <!-- New Product -->
+        <div class="row margin-minus-b-15">
+          <div class="col">
+            <div class="tab-content">
+              <!-- 1st Product tab start -->
+              <div class="tab-pane fade show active" id="all">
+                <div class="row">
+                  <% for(let i=0;i<5;i++){%>
+                  <div
+                    class="col-md-4 col-sm-6 col-xs-6 ms-col-5 ms-product-content"
+                  >
+                    <div class="ms-product-inner">
+                      <div class="ms-pro-image-outer">
+                        <div class="ms-pro-image">
+                          <a href="/singleProduct?id=<%=productInfo[i]._id%>" class="image">
+                            <span class="label veg">
+                              <span class="dot"></span>
+                            </span>
+                            <img
+                              class="main-image"
+                              src="assets/img/uploads/<%=productInfo[i].images[0]%>"
+                              alt="Product"
+                            />
+                            <img
+                              class="hover-image"
+                              src="/assets/img/uploads/<%=productInfo[i].images[1]%>"
+                              alt="Product"
+                            />
+                          </a>
+                          <div class="ms-pro-actions">
+                            <a class="ms-btn-group wishlist" title="Wishlist"
+                              ><img
+                                src="assets/img/icons/pro_wishlist.svg"
+                                class="svg_img pro_svg"
+                                alt=""
+                            /></a>
+                            <a
+                              href="javascript:void(0)"
+                              title="Add To Cart"
+                              class="ms-btn-group add-to-cart"
+                              ><img
+                                src="assets/img/icons/pro_cart.svg"
+                                class="svg_img pro_svg"
+                                alt=""
+                            /></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="ms-pro-content">
+                        <a href="/products">
+                          <h6 class="ms-pro-stitle"><%=productInfo[i].category.categoryName%></h6>
+                        </a>
+                        <h5 class="ms-pro-title">
+                          <a href="/singleProduct?id=<%=productInfo[i]._id%>"
+                            ><%=productInfo[i].productName%></a
+                          >
+                        </h5>
+                        <div class="ms-pro-rat-price">
+                          <span class="ms-pro-rating">
+                            <i class="msicon msi-star fill"></i>
+                            <i class="msicon msi-star fill"></i>
+                            <i class="msicon msi-star"></i>
+                            <i class="msicon msi-star"></i>
+                            <i class="msicon msi-star"></i>
+                          </span>
+                          <span class="ms-price">
+                            <span class="new-price">₹<%=productInfo[i].price%></span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <% } %>
+                  </div>
+              </div>
+              <!-- 1st Product tab end -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Product tab Area End -->
+
+    <!-- Banner section -->
+    <section class="ms-banner padding-tb-30">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="ms-animated-banner">
+              <h2 class="d-none">Offers</h2>
+              <div class="ms-bnr-detail">
+                <div class="ms-bnr-info">
+                  <h2>Cakes and Ice creams<br />Fresh Products</h2>
+                  <h3>30% off sale <span>Hurry up!!!</span></h3>
+                  <a href="cart.ejs" class="ms-btn-2"
+                    >Shop now</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Banner section End -->
+
+
+    <!-- Service Section -->
+    <section class="ms-service-section padding-tb-30">
+      <div class="container">
+        <div class="row m-tb-minus-12">
+          <div
+            class="ms-ser-content ms-ser-content-1 col-sm-6 col-md-6 col-lg-3 p-tp-12"
+          >
+            <div class="ms-ser-inner">
+              <div class="ms-service-image">
+                <img src="assets/img/service/1.png" class="svg_img" alt="" />
+              </div>
+              <div class="ms-service-desc">
+                <h3>Free Shipping</h3>
+                <p>Free shipping on all US order or order above ₹200</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="ms-ser-content ms-ser-content-2 col-sm-6 col-md-6 col-lg-3 p-tp-12"
+          >
+            <div class="ms-ser-inner">
+              <div class="ms-service-image">
+                <img src="assets/img/service/2.png" class="svg_img" alt="" />
+              </div>
+              <div class="ms-service-desc">
+                <h3>24X7 Support</h3>
+                <p>Contact us 24 hours a day, 7 days a week</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="ms-ser-content ms-ser-content-3 col-sm-6 col-md-6 col-lg-3 p-tp-12"
+          >
+            <div class="ms-ser-inner">
+              <div class="ms-service-image">
+                <img src="assets/img/service/3.png" class="svg_img" alt="" />
+              </div>
+              <div class="ms-service-desc">
+                <h3>30 Days Return</h3>
+                <p>Simply return it within 30 days for an exchange</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="ms-ser-content ms-ser-content-4 col-sm-6 col-md-6 col-lg-3 p-tp-12"
+          >
+            <div class="ms-ser-inner">
+              <div class="ms-service-image">
+                <img src="assets/img/service/4.png" class="svg_img" alt="" />
+              </div>
+              <div class="ms-service-desc">
+                <h3>Payment Secure</h3>
+                <p>Contact us 24 hours a day, 7 days a week</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Service Section End -->
+
+    <!-- Newsletter Section -->
+    <section class="ms-news-section padding-tb-30">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="ms-newsletter">
+              <div class="ms-newsletter-detail">
+                <div class="ms-detail">
+                  <h4>Subscribe For Join Us!</h4>
+                  <p>Get in touch and get the future update.</p>
+                </div>
+                <div class="ms-newsletter-form">
+                  <form>
+                    <input
+                      type="email"
+                      id="nemail"
+                      name="nemail"
+                      placeholder="Email Address"
+                    /><br />
+                    <button class="ms-btn-2" type="submit" value="Submit">
+                      <img
+                        src="assets/img/icons/send.svg"
+                        class="svg_img"
+                        alt="send"
+                      />
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Instagram Start -->
+    <section class="ms-instagram-section padding-t-30">
+      <h2 class="d-none">Instagram</h2>
+      <div class="ms-insta-wrapper" data-animation="fadeIn">
+        <div class="ms-insta-outer">
+          <div class="insta-auto">
+            <!-- instagram item -->
+            <div class="ms-insta-item">
+              <div class="ms-insta-inner">
+                <a href="#" target="_blank">
+                  <img
+                    src="assets/img/instragram-image/1.jpg"
+                    alt="instragram-image"
+                  />
+                </a>
+              </div>
+            </div>
+            <!-- instagram item -->
+            <div class="ms-insta-item">
+              <div class="ms-insta-inner">
+                <a href="#" target="_blank">
+                  <img
+                    src="assets/img/instragram-image/2.jpg"
+                    alt="instragram-image"
+                  />
+                </a>
+              </div>
+            </div>
+            <!-- instagram item -->
+            <div class="ms-insta-item">
+              <div class="ms-insta-inner">
+                <a href="#" target="_blank">
+                  <img
+                    src="assets/img/instragram-image/3.jpg"
+                    alt="instragram-image"
+                  />
+                </a>
+              </div>
+            </div>
+            <!-- instagram item -->
+            <div class="ms-insta-item">
+              <div class="ms-insta-inner">
+                <a href="#" target="_blank">
+                  <img
+                    src="assets/img/instragram-image/4.jpg"
+                    alt="instragram-image"
+                  />
+                </a>
+              </div>
+            </div>
+            <!-- instagram item -->
+            <!-- instagram item -->
+            <div class="ms-insta-item">
+              <div class="ms-insta-inner">
+                <a href="#" target="_blank">
+                  <img
+                    src="assets/img/instragram-image/5.jpg"
+                    alt="instragram-image"
+                  />
+                </a>
+              </div>
+            </div>
+            <!-- instagram item -->
+            <div class="ms-insta-item">
+              <div class="ms-insta-inner">
+                <a href="#" target="_blank">
+                  <img
+                    src="assets/img/instragram-image/6.jpg"
+                    alt="instragram-image"
+                  />
+                </a>
+              </div>
+            </div>
+            <!-- instagram item -->
+            <div class="ms-insta-item">
+              <div class="ms-insta-inner">
+                <a href="#" target="_blank">
+                  <img
+                    src="assets/img/instragram-image/7.jpg"
+                    alt="instragram-image"
+                  />
+                </a>
+              </div>
+            </div>
+            <!-- instagram item -->
+            <div class="ms-insta-item">
+              <div class="ms-insta-inner">
+                <a href="#" target="_blank">
+                  <img
+                    src="assets/img/instragram-image/8.jpg"
+                    alt="instragram-image"
+                  />
+                </a>
+              </div>
+            </div>
+            <!-- instagram item -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Instagram End -->
+
+    <!-- Footer Start -->
+    <footer class="ms-footer m-t-30">
+      <div class="footer-container">
+        <div class="footer-top padding-tb-60">
+          <div class="container">
+            <div class="row m-minus-991">
+              <div class="col-sm-12 col-lg-3 ms-footer-cat">
+                <div class="ms-footer-widget ms-footer-company">
+                  <img
+                    src="assets/img/logo/footer-logo.png"
+                    class="ms-footer-logo"
+                    alt="footer logo"
+                  />
+                  <p class="ms-footer-detail">
+                    Masterkart is the biggest market of grocery products. Get
+                    your daily needs from our store.
+                  </p>
+                  <div class="ms-app-store">
+                    <a href="#" class="app-img"
+                      ><img
+                        src="assets/img/app/android.png"
+                        class="adroid"
+                        alt="apple"
+                    /></a>
+                    <a href="#" class="app-img"
+                      ><img
+                        src="assets/img/app/apple.png"
+                        class="apple"
+                        alt="apple"
+                    /></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-2 ms-footer-info">
+                <div class="ms-footer-widget">
+                  <h4 class="ms-footer-heading">Category</h4>
+                  <div class="ms-footer-links ms-footer-dropdown">
+                    <ul class="align-items-center">
+                      <li class="ms-footer-link">
+                        <a href="shop-left-sidebar-col-3.ejs">Dairy & Milk</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="shop-banner-left-sidebar-col-3.ejs"
+                          >Snack & Spice</a
+                        >
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="shop-full-width-col-5.ejs">Fast Food</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="shop-list-left-sidebar.ejs">Juice & Drinks</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="shop-list-full-col-2.ejs">Bakery</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="shop-banner-right-sidebar-col-4.ejs"
+                          >Seafood</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-2 ms-footer-account">
+                <div class="ms-footer-widget">
+                  <h4 class="ms-footer-heading">Company</h4>
+                  <div class="ms-footer-links ms-footer-dropdown">
+                    <ul class="align-items-center">
+                      <li class="ms-footer-link">
+                        <a href="about-us.ejs">About us</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="track-order.ejs">Delivery</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="privacy-policy.ejs">Legal Notice</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="terms-condition.ejs">Terms & conditions</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="checkout.ejs">Secure payment</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="contact-us.ejs">Contact us</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-2 ms-footer-service">
+                <div class="ms-footer-widget">
+                  <h4 class="ms-footer-heading">Account</h4>
+                  <div class="ms-footer-links ms-footer-dropdown">
+                    <ul class="align-items-center">
+                      <li class="ms-footer-link">
+                        <a href="register.ejs">Sign In</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="/myAccount">Account</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="/cart">View Cart</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="/orderHistory">Orders</a>
+                      </li>
+                      <li class="ms-footer-link">
+                        <a href="checkout.ejs">Payments</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-3 ms-footer-cont-social">
+                <div class="ms-footer-contact">
+                  <div class="ms-footer-widget">
+                    <h4 class="ms-footer-heading">Contact</h4>
+                    <div class="ms-footer-links ms-footer-dropdown">
+                      <ul class="align-items-center">
+                        <li class="ms-footer-link ms-foo-location">
+                          <span
+                            ><img
+                              src="assets/img/icons/foo-location.svg"
+                              class="svg_img foo_svg"
+                              alt=""
+                          /></span>
+                          <p>
+                            2548 Broaddus Maple Court, Madisonville KY 4783,
+                            USA.
+                          </p>
+                        </li>
+                        <li class="ms-footer-link ms-foo-call">
+                          <span
+                            ><img
+                              src="assets/img/icons/foo-wp.svg"
+                              class="svg_img foo_svg"
+                              alt="" /></span
+                          ><a href="tel:+009876543210">+00 9876543210</a>
+                        </li>
+                        <li class="ms-footer-link ms-foo-mail">
+                          <span
+                            ><img
+                              src="assets/img/icons/foo-mail.svg"
+                              class="svg_img foo_svg"
+                              alt="" /></span
+                          ><a href="mailto:example@email.com"
+                            >example@email.com</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="ms-footer-social">
+                  <div class="ms-footer-widget">
+                    <div class="ms-footer-links ms-footer-dropdown">
+                      <ul class="align-items-center">
+                        <li class="ms-footer-link">
+                          <a href="#"
+                            ><i
+                              class="msicon msi-instagram"
+                              aria-hidden="true"
+                            ></i
+                          ></a>
+                        </li>
+                        <li class="ms-footer-link">
+                          <a href="#"
+                            ><i
+                              class="msicon msi-twitter-square"
+                              aria-hidden="true"
+                            ></i
+                          ></a>
+                        </li>
+                        <li class="ms-footer-link">
+                          <a href="#"
+                            ><i
+                              class="msicon msi-facebook-square"
+                              aria-hidden="true"
+                            ></i
+                          ></a>
+                        </li>
+                        <li class="ms-footer-link">
+                          <a href="#"
+                            ><i
+                              class="msicon msi-linkedin-square"
+                              aria-hidden="true"
+                            ></i
+                          ></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="container">
+            <div class="row">
+              <div class="ms-bottom-info">
+                <!-- Footer Copyright Start -->
+                <div class="footer-copy">
+                  <div class="footer-bottom-copy">
+                    <div class="ms-copy">
+                      Copyright ©
+                      <a class="site-name" href="index-2.ejs">Masterkart</a>
+                      all rights reserved. Powered by Masterkart.
+                    </div>
+                  </div>
+                </div>
+                <!-- Footer Copyright End -->
+                <!-- Footer payment -->
+                <div class="footer-bottom-right">
+                  <div
+                    class="footer-bottom-payment d-flex justify-content-center"
+                  >
+                    <div class="payment-link">
+                      <img src="assets/img/hero-bg/payment.png" alt="payment" />
+                    </div>
+                  </div>
+                </div>
+                <!-- Footer payment -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Area End -->
+
+    <!-- Quickview Modal -->
+    <div
+      class="modal fade quickview-modal"
+      id="ms_quickview_modal"
+      tabindex="-1"
+      role="dialog"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <button
+            type="button"
+            class="btn-close qty_close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-5 col-sm-12 col-xs-12">
+                <div class="qty-product-cover">
+                  <div class="qty-slide">
+                    <img
+                      class="img-responsive"
+                      src="assets/img/product-images/1_1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="qty-slide">
+                    <img
+                      class="img-responsive"
+                      src="assets/img/product-images/2_1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="qty-slide">
+                    <img
+                      class="img-responsive"
+                      src="assets/img/product-images/3_1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="qty-slide">
+                    <img
+                      class="img-responsive"
+                      src="assets/img/product-images/4_1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="qty-slide">
+                    <img
+                      class="img-responsive"
+                      src="assets/img/product-images/5_1.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="qty-nav-thumb">
+                  <div class="qty-slide">
+                    <img
+                      class="img-responsive"
+                      src="assets/img/product-images/1_1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="qty-slide">
+                    <img
+                      class="img-responsive"
+                      src="assets/img/product-images/2_1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="qty-slide">
+                    <img
+                      class="img-responsive"
+                      src="assets/img/product-images/3_1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="qty-slide">
+                    <img
+                      class="img-responsive"
+                      src="assets/img/product-images/4_1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="qty-slide">
+                    <img
+                      class="img-responsive"
+                      src="assets/img/product-images/5_1.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-7 col-sm-12 col-xs-12">
+                <div class="quickview-pro-content">
+                  <h5 class="ms-quick-title">
+                    <a href="product-left-sidebar.ejs"
+                      >premium quality organic trail mix dried fruit pack</a
+                    >
+                  </h5>
+                  <div class="ms-quickview-rating">
+                    <i class="msicon msi-star fill"></i>
+                    <i class="msicon msi-star fill"></i>
+                    <i class="msicon msi-star fill"></i>
+                    <i class="msicon msi-star fill"></i>
+                    <i class="msicon msi-star"></i>
+                  </div>
+
+                  <div class="ms-quickview-desc">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s,
+                  </div>
+                  <div class="ms-quickview-price">
+                    <span class="new-price">₹150.00</span>
+                    <span class="old-price">₹200.00</span>
+                  </div>
+
+                  <div class="ms-pro-variation">
+                    <div
+                      class="ms-pro-variation-inner ms-pro-variation-size ms-pro-size"
+                    >
+                      <span>Size</span>
+                      <div class="ms-pro-variation-content">
+                        <ul class="ms-opt-size">
+                          <li class="active">
+                            <a
+                              href="javascript:void(0)"
+                              class="ms-opt-sz"
+                              data-tooltip="Small"
+                              >250g</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="javascript:void(0)"
+                              class="ms-opt-sz"
+                              data-tooltip="Medium"
+                              >500g</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="javascript:void(0)"
+                              class="ms-opt-sz"
+                              data-tooltip="Large"
+                              >1kg</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="javascript:void(0)"
+                              class="ms-opt-sz"
+                              data-tooltip="Extra Large"
+                              >2kg</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="ms-quickview-qty">
+                    <div class="qty-plus-minus">
+                      <input
+                        class="qty-input"
+                        type="text"
+                        name="ms_qtybtn"
+                        value="1"
+                      />
+                    </div>
+                    <div class="ms-quickview-cart">
+                      <button class="ms-btn-3">
+                        <img
+                          src="assets/img/icons/pro_cart.svg"
+                          class="svg_img pro_svg"
+                          alt=""
+                        />
+                        Add To Cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Quickview Modal end -->
+
+    <!-- Add to Cart Notify -->
+    <div class="ms-cart-notify">
+      <a href="javascript:void(0)" class="ms-cart-toggle"
+        ><img
+          src="assets/img/icons/pro_cart.svg"
+          class="svg_img"
+          alt="cart"
+        /><span>3</span></a
+      >
+    </div>
+
+    <!-- Add to Wishlist Notify  -->
+    <div class="ms-wish-notify"></div>
+
+    <!-- Add to Compare list Notify  -->
+    <div class="ms-compare-notify"></div>
+
+    <!-- Back to top  -->
+    <a class="ms-back-to-top"></a>
+
+    <!-- Add to Compare list Notify  -->
+    <div class="ms-compare-notify"></div>
+
+    <!-- Features sidebar  -->
+    <div class="ms-features-sidebar-overlay"></div>
+    <div class="ms-features-sidebar">
+      <div class="tool-title">
+        <h3>Features</h3>
+      </div>
+      <a href="#" class="ms-tools-sidebar-toggle open-features">
+        <img alt="icon" src="assets/img/icons/setting.svg" class="svg_img" />
+      </a>
+      <div class="ms-features-block">
+        <div class="ms-features-title">Colors</div>
+        <ul class="bg-panel ms-change-color">
+          <li class="active" data-color="01">
+            <a href="javascript:void(0)" class="colorcode1"></a>
+          </li>
+          <li data-color="02">
+            <a href="javascript:void(0)" class="colorcode2"></a>
+          </li>
+          <li data-color="03">
+            <a href="javascript:void(0)" class="colorcode3"></a>
+          </li>
+          <li data-color="04">
+            <a href="javascript:void(0)" class="colorcode4"></a>
+          </li>
+          <li data-color="05">
+            <a href="javascript:void(0)" class="colorcode5"></a>
+          </li>
+          <li data-color="06">
+            <a href="javascript:void(0)" class="colorcode6"></a>
+          </li>
+          <li data-color="07">
+            <a href="javascript:void(0)" class="colorcode7"></a>
+          </li>
+          <li data-color="08">
+            <a href="javascript:void(0)" class="colorcode8"></a>
+          </li>
+          <li data-color="09">
+            <a href="javascript:void(0)" class="colorcode9"></a>
+          </li>
+        </ul>
+      </div>
+      <div class="ms-features-block">
+        <div class="ms-tools-sidebar-content">
+          <div class="ms-features-title">Dark mode</div>
+          <div class="ms-change-mode" id="ms-change-mode">
+            <div class="ms-mode-switch">
+              <div class="ms-mode-btn">Mode</div>
+              <div class="ms-mode-on">On</div>
+              <div class="ms-mode-off">Off</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plugins JS -->
+    <script src="assets/js/plugins/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/plugins/popper.min.js"></script>
+    <script src="assets/js/plugins/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/plugins/bootstrap-select.min.js"></script>
+    <script src="assets/js/plugins/swiper-bundle.min.js"></script>
+    <script src="assets/js/plugins/fontawesome.js"></script>
+    <script src="assets/js/plugins/owl.carousel.min.js"></script>
+    <script src="assets/js/plugins/countdownTimer.js"></script>
+    <script src="assets/js/plugins/infiniteslidev2.js"></script>
+    <script src="assets/js/plugins/jquery.zoom.min.js"></script>
+    <script src="assets/js/plugins/slick.min.js"></script>
+    <script src="assets/js/plugins/nouislider.js"></script>
+
+    <!-- Main Js -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/demo-1.js"></script>
+  </body>
+
+  <!-- Mirrored from maraviyainfotech.com/wrapbootstrap/masterkart-ejs/masterkart-ejs/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Mar 2024 10:02:04 GMT -->
+</ejs>
