@@ -663,6 +663,16 @@ const postOrderPlaced = async (req, res) => {
           { userId: req.session.userInfo._id },
           { $inc: { walletBalance: -req.session.wholeTotal } }
         );
+        const newTransaction = {
+          transactionDate: new Date(),
+          transactionAmount: req.session.wholeTotal,
+          transactionType: "Payment Deducted", // You can customize this string as needed
+        };
+    
+        await walletModel.updateOne(
+          { userId: userId },
+          { $push: { walletTransaction: newTransaction } }
+        );
       }
 
       res.send({

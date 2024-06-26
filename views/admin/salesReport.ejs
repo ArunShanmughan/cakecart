@@ -601,7 +601,7 @@
                 <% if (salesData[i].couponOffers) { %>
                 Rs.<%=Math.round(salesData[i].grandTotalcost / (1 -
                 salesData[i].couponOffers.discountPercentage / 100)) %> <% }
-                else { %> Rs.<%= salesData[i].grandTotalcost %> <% } %>
+                else { %> Rs.<%= Number(salesData[i].grandTotalcost) %> <% } %>
               </td>
               <td>Rs.<%= salesData[i].grandTotalcost %></td>
             </tr>
