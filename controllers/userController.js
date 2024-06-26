@@ -175,7 +175,7 @@ const getMyWallet = async (req, res) => {
   try {
     let myWallet = await walletModel.findOne({
       userId: req.session.userInfo._id,
-    });
+    })
     console.log(myWallet);
     res.render("users/myWallet", { myWallet, islogin: req.session.isLogged });
   } catch (error) {}

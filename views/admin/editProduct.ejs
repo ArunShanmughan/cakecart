@@ -442,18 +442,18 @@
             </div>
             <br />
             <select
-              name="parentCategory"
+               name="parentCategory"
               class="form-control form-control-md mb-4"
-              style="max-width: 300px"
+               style="max-width: 300px"
             >
-              <% categorydetails.forEach(category => { %>
+               <% categorydetails.forEach(category => { %>
                 <option 
-                  value="<%= category._id %>" 
-                  <%=categoryInfo?.categoryName === productInfo?.category?.categoryName ? 'selected' : '' %>
-                >
-                  <%=categoryInfo?.categoryName %>
-                </option>
-              <% }) %>
+                   value="<%= category._id %>" 
+                   <%= category.categoryName === productInfo?.category?.categoryName ? 'selected' : '' %>
+                 >
+                   <%= category.categoryName %>
+                 </option>
+               <% }) %>
             </select>
           
             <div class="form-group">
@@ -469,8 +469,7 @@
               <% for (let i = 0; i < productInfo?.images?.length; i++) { %>
                 <div class="image-item" style="display: inline-block; position: relative; margin: 5px;">
                   <img src="assets/img/uploads/<%= productInfo?.images[i] %>" class="image-preview">
-                  <button class="delete-btn" type="button" onclick="deleteImage(`<%= i %>`)">Delete</button>
-                  <button class="crop-btn" type="button" onclick="cropImage(`<%= i %>`)">Crop</button>
+                  <button class="delete-btn" type="button" onclick="deleteImage(`<%= i %>`,`<%=productInfo._id%>`)">Delete</button>
                 </div>
               <% } %>
             </div>
@@ -554,18 +553,23 @@
     }
   }
 
-  function deleteNewImage(index) {
-    const previewContainer = document.getElementById('new-image-preview');
-    const images = previewContainer.getElementsByClassName('image-item');
-    if (images[index]) {
-      previewContainer.removeChild(images[index]);
-      // Remove the file from the input field
-      const inputField = document.getElementById('images');
-      const files = inputField.files;
-      files.splice(index, 1);
-      inputField.files = files;
+    function deleteNewImage(index) {
+      const previewContainer = document.getElementById('new-image-preview');
+      const images = previewContainer.getElementsByClassName('image-item');
+      if (images[index]) {
+        previewContainer.removeChild(images[index]);
+
+        const inputField = document.getElementById('images');
+        const files = Array.from(inputField.files);
+        files.splice(index, 1);
+        inputField.files = new DataTransfer().files = files;
+
+        
+        inputField.value = ''; 
+        inputField.files = new DataTransfer().files = files; 
+        inputField.dispatchEvent(new Event('change')); 
+      }
     }
-  }
 
   function cropNewImage(index) {
     const previewContainer = document.getElementById('new-image-preview');
@@ -602,20 +606,6 @@
     }
   }
         
-          function updateImages() {
-            const imageContainer = document.getElementById('image-container');
-            imageContainer.innerHTML = '';
-            productImages.forEach((image, i) => {
-              const imageItem = document.createElement('div');
-              imageItem.className = 'image-item';
-              imageItem.style.cssText = 'display: inline-block; position: relative; margin: 5px;';
-              imageItem.innerHTML = `
-                <img src="${image}" style="height: 60px; width: 60px; border-radius: 0;">
-                <button class="delete-btn" type="button" onclick="deleteImage(${i})" style="position: absolute; top: 0; right: 0;">Delete</button>
-                <button class="crop-btn" type="button" onclick="cropImage(${i})" style="position: absolute; bottom: 0; right: 0;">Crop</button>`;
-              imageContainer.appendChild(imageItem);
-            });
-          }
         
           function handleImagePreview(files) {
             const previewContainer = document.getElementById('image-preview-container');
@@ -638,6 +628,42 @@
               reader.readAsDataURL(file);
             }
           }
+
+          async function deleteImage(imageIndex, productId) {
+           try {
+             const response = await fetch('/delete-image', {
+               method: 'POST',
+               headers: {
+                 'Content-Type': 'application/json'
+               },
+               body: JSON.stringify({ imageIndex, productId })
+             });
+
+             const result = await response.json();
+
+             if (result.success) {
+               Swal.fire({
+                 icon: 'success',
+                 title: 'Success',
+                 text: 'Image deleted successfully'
+               });
+               // Optionally, you can remove the image from the DOM here
+               document.querySelector(`.image-item:nth-child(${imageIndex + 1})`).remove();
+             } else {
+               Swal.fire({
+                 icon: 'error',
+                 title: 'Error',
+                 text: 'Image could not be deleted'
+               });
+             }
+           } catch (error) {
+             Swal.fire({
+               icon: 'error',
+               title: 'Error',
+               text: 'An error occurred'
+             });
+           }
+         }
         
           function removePreviewImage(index) {
             const previewContainer = document.getElementById('image-preview-container');
@@ -729,8 +755,8 @@
                 await Swal.fire({
                   icon: "success",
                   title: "Product Added",
-                });
-                window.location.href = "/productManagment";
+                }).then(()=>window.location.href = "/productManagment")
+                
               }
               if (result.noValue) {
                 await Swal.fire({

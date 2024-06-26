@@ -130,6 +130,30 @@ const getEditProduct = async (req, res) => {
   }
 };
 
+const deleteImage = async(req,res)=>{
+  const {imageIndex,productId}= req.body;
+  console.log("This is req.body in  deleteimage",req.body)
+  try {
+    const product = await productModel.findOne({_id:productId});
+    console.log("This is product in deleteimage for deleting the image",product);
+    if(!product){
+      return res.send({success:false,message:"product not found"});
+    }
+    console.log("to check whether it is true or false",imageIndex<product.images.length)
+    if(imageIndex>=0&&imageIndex<product.images.length){
+      product.images.splice(imageIndex,1);
+      await product.save();
+      return res.send({success:true});
+    }else{
+      console.log("This is coming to the else case in delete image")
+      return res.send({success:false,message:"imavlid image index"});
+    }
+  } catch (error) {
+    console.log("something went wrong in the image deleting",error);
+    res.send({success:false,message:"An error ocurred"});
+  }
+}
+
 const postEditProduct = async (req, res) => {
   try {
     console.log("coming to the post edit prouct with req.body",req.body)
@@ -139,7 +163,7 @@ const postEditProduct = async (req, res) => {
         _id: req.params.id,
       });
       var imageFiles = existingProduct.images;
-    } else if (req.files.length < 3) {
+    } else if (req.files.length == 0) {
       res.send({ noImage: true });
     } else {
       var imageFiles = [];
@@ -191,5 +215,6 @@ module.exports = {
   getAddProduct,
   postAddProduct,
   getEditProduct,
+  deleteImage,
   postEditProduct,
 };

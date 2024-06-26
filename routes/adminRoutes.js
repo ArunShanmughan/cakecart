@@ -28,6 +28,7 @@ const {
   getAddProduct,
   postAddProduct,
   getEditProduct,
+  deleteImage,
   postEditProduct,
 } = require("../controllers/productController.js");
 
@@ -90,6 +91,7 @@ admRouter.get("/productUnBlock", admAuth, productUnBlock);
 admRouter.get("/addProduct", admAuth, getAddProduct);
 admRouter.post("/addProducts", admAuth, upload.any(), postAddProduct);
 admRouter.get("/editProduct", admAuth, getEditProduct);
+admRouter.post("/delete-image",admAuth,deleteImage)
 admRouter.post("/editProducts/:id", admAuth, upload.any(), postEditProduct);
 
 //Order Managment Routers

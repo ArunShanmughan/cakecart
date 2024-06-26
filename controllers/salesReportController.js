@@ -1,4 +1,5 @@
 const orderData = require("../models/orderModel");
+const products = require("../models/productModel");
 const userData = require("../models/userDB");
 const formatDate = require("../services/formatDate");
 // const getSalesData = require("../services/salesData")
@@ -30,21 +31,19 @@ const getSalesReport = async (req, res) => {
       .sort({ orderDate: -1 })
       .populate("userId")
       .populate({
-        path: "cartData.productId",
-        model: "products",
-        as: "productDetails",
+        path: "cartData.productId", // This specifies the path to the nested field
+        model: "products", // Replace with the actual model name if different
       })
-      .populate("couponOffers")
       .skip(skip)
       .limit(limit);
     console.log("this is salesdata ->", salesData);
     salesData.forEach((order) => {
       order.cartData.forEach((item) => {
-        console.log("Product Details: ", item.productDetails);
+        console.log("Product Details: ", item.cartData);
       });
     });
-    console.log("this is salesdata ->");
-    console.log("this is salesdata.cartData ->");
+    console.log("this is salesdata ->", salesData);
+    console.log("this is salesdata.cartData ->", salesData.cartData);
     console.log("this is Count ->", count);
     console.log("this is limt ->", limit);
     res.render("admin/salesReport", {
@@ -290,7 +289,7 @@ const salesReportExcelDownload = async (req, res) => {
     await workBook.xlsx.write(res);
     res.end();
   } catch (error) {
-    console.log("Something went wrong in excel downloading",error);
+    console.log("Something went wrong in excel downloading", error);
   }
 };
 

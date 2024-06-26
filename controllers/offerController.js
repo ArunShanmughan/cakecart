@@ -3,7 +3,8 @@ const formatDate = require("../services/formatDate");
 const productModel = require("../models/productModel");
 const categoryModel = require("../models/categoryModel");
 const categoryOfferModel = require("../models/categoryOfferModel");
-const applyCategoryOffer = require("../services/applyCategoryOffer").applyCategoryOffer;
+const applyCategoryOffer =
+  require("../services/applyCategoryOffer").applyCategoryOffer;
 const applyProductOffers =
   require("../services/applyProductOffer").applyProductOffer;
 
@@ -107,13 +108,34 @@ const putEditOffer = async (req, res) => {
   }
 };
 
-
 const getCategoryOffer = async (req, res) => {
   try {
+    const page = Number(req.query.page) || 1;
+    const limit = 9;
+    const skip = (page - 1) * limit;
+
     const categories = await categoryModel.find();
-    const categoryOffers = await categoryOfferModel.find().populate("category");
+    const categoryOffers = await categoryOfferModel
+      .find()
+      .populate("category")
+      .skip(skip)
+      .limit(limit);
+
+    let pages;
+    await categoryOfferModel
+      .countDocuments()
+      .then((count) => {
+        pages = count;
+      })
+      .catch((err) => console.log("Error while counting the docment" + err));
+
     applyCategoryOffer();
-    res.render("admin/categoryOfferManagment", { categories, categoryOffers });
+    res.render("admin/categoryOfferManagment", {
+      categories,
+      categoryOffers,
+      page: page,
+      pages: Math.ceil(pages / limit),
+    });
   } catch (error) {
     console.log(
       "Somethig went wrog with getting category Offer Managment",
@@ -122,24 +144,25 @@ const getCategoryOffer = async (req, res) => {
   }
 };
 
-
-
 const ChangeCategoryOfferStatus = async (req, res) => {
   try {
     let presentCategory = await categoryOfferModel.findOne({
       _id: req.params.id,
     });
-    console.log("this is in the change status offer status function",presentCategory);
+    console.log(
+      "this is in the change status offer status function",
+      presentCategory
+    );
     if (presentCategory.isAvailable) {
-     await categoryOfferModel.findByIdAndUpdate(
+      await categoryOfferModel.findByIdAndUpdate(
         { _id: presentCategory._id },
         { $set: { isAvailable: false } }
-      )
+      );
     } else {
       await categoryOfferModel.findByIdAndUpdate(
         { _id: presentCategory._id },
         { $set: { isAvailable: true } }
-      )
+      );
     }
 
     res.send({ success: true });
@@ -151,42 +174,52 @@ const ChangeCategoryOfferStatus = async (req, res) => {
   }
 };
 
-const postNewCategoryOffer = async(req,res)=>{
+const postNewCategoryOffer = async (req, res) => {
   try {
     // console.log("this is in the body of postNewCategoryOffer",req.body);
-    const {category,categoryOfferPercentage,startDate,endDate} = req.body;
+    const { category, categoryOfferPercentage, startDate, endDate } = req.body;
 
-    const offerExist = await categoryOfferModel.findOne({category});
+    const offerExist = await categoryOfferModel.findOne({ category });
 
-    if(offerExist){
-      res.send({exist:true})
+    if (offerExist) {
+      res.send({ exist: true });
     }
 
     const offer = await new categoryOfferModel({
       category,
-      offerPercentage:categoryOfferPercentage,
+      offerPercentage: categoryOfferPercentage,
       startDate,
-      endDate
-    }).save()
+      endDate,
+    }).save();
 
-    res.send({success:true})
+    res.send({ success: true });
   } catch (error) {
-    console.log("Something went Were in postNewCategoryOffer controller",error);
+    console.log(
+      "Something went Were in postNewCategoryOffer controller",
+      error
+    );
   }
-}
+};
 
-const editCategoryOffer = async(req,res)=>{
+const editCategoryOffer = async (req, res) => {
   try {
     // console.log("This is the req.body coming into the editCategoryOffer:",req.body);
-    const {id,offerPercentage,startDate,endDate}=req.body;
+    const { id, offerPercentage, startDate, endDate } = req.body;
 
-    const offer = await categoryOfferModel.findByIdAndUpdate(id,{offerPercentage,startDate,endDate});
-    res.send({success:true});
+    const offer = await categoryOfferModel.findByIdAndUpdate(id, {
+      offerPercentage,
+      startDate,
+      endDate,
+    });
+    res.send({ success: true });
   } catch (error) {
-    res.send({success:false});
-    console.log("Something went wrong in the editCategoryOffer controller",error);
+    res.send({ success: false });
+    console.log(
+      "Something went wrong in the editCategoryOffer controller",
+      error
+    );
   }
-}
+};
 
 module.exports = {
   getOfferManagment,

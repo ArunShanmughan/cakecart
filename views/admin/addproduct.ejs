@@ -596,14 +596,14 @@ button[type="submit"]:hover {
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
         
         <script>
-        document.addEventListener('DOMContentLoaded', function () {
+          document.addEventListener('DOMContentLoaded', function () {
             const imageInput = document.getElementById('images');
             const imagePreviewContainer = document.getElementById('image-preview-container');
             const cropperImage = document.getElementById('cropperImage');
             const cropModal = document.getElementById('cropModal');
             const cropButton = document.getElementById('cropButton');
             let cropper;
-        
+
             imageInput.addEventListener('change', (e) => {
                 const files = imageInput.files;
                 imagePreviewContainer.innerHTML = '';
@@ -617,12 +617,20 @@ button[type="submit"]:hover {
                         img.width = 100;
                         img.height = 100;
                         img.alt = file.name;
-        
+
                         const deleteButton = document.createElement('button');
                         deleteButton.textContent = 'Delete';
                         deleteButton.onclick = (event) => {
                             event.preventDefault();
-                            imagePreviewContainer.removeChild(img.parentNode);
+                            imagePreviewContainer.removeChild(imageContainer); // Remove image preview from DOM
+        
+                            // Remove corresponding file from imageInput.files
+                            const files = Array.from(imageInput.files);
+                            const index = files.findIndex(fileItem => fileItem === file);
+                            if (index !== -1) {
+                                files.splice(index, 1);
+                                imageInput.files = new FileList(files);
+                            }
                         };
         
                         const cropButton = document.createElement('button');
@@ -641,13 +649,13 @@ button[type="submit"]:hover {
                     reader.readAsDataURL(file);
                 }
             });
-        
+
             function openCropper(imageSrc) {
                 cropperImage.src = imageSrc;
                 cropModal.style.display = 'block';
         
                 if (cropper) {
-                    cropper.destroy();
+            cropper.destroy();
                 }
         
                 cropper = new Cropper(cropperImage, {
@@ -696,7 +704,7 @@ button[type="submit"]:hover {
                     }
                 }
             });
-        
+
             $('#addProduct').validate({
                 rules: {
                     productName: {
@@ -719,8 +727,8 @@ button[type="submit"]:hover {
                     event.preventDefault();
                     const formData = new FormData(form);
                     const images = formData.getAll('images');
-                    console.log("inside the add product image field",images)
-                    console.log("inside the add prouct details field",formData)
+                    console.log("inside the add product image field", images)
+                    console.log("inside the add product details field", formData)
                     if (images.length < 3) {
                         await Swal.fire({
                             icon: "error",
@@ -762,7 +770,8 @@ button[type="submit"]:hover {
                     }
                 }
             });
-        });
+          });
+
         </script>
       
         </div>

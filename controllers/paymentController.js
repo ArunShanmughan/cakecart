@@ -27,8 +27,8 @@ const onlinePayments = async (req, res) => {
         payment_method: "paypal",
       },
       redirect_urls: {
-        return_url: "http://localhost:3000/paymentDone",
-        cancel_url: "http://localhost:3000/checkout",
+        return_url: "http://cakecart.online/paymentDone",
+        cancel_url: "http://cakecart.online/checkout",
       },
       transactions: [
         {

@@ -4,7 +4,8 @@ const admAuth = require("../middlewares/adminAuth");
 
 const getCategoryManagment = async (req, res) => {
   try {
-      const catDetails = await categoryModel.find();
+    const catDetails = await categoryModel.find();
+    console.log(catDetails)
       res.render("admin/categoryManagment", { categoryinfo: catDetails });
   } catch (error) {
     console.log("Something Went Wrong", error);

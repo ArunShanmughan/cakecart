@@ -560,7 +560,6 @@
               <th>Total Cost</th>
               <th>Payment Method</th>
               <th>Status</th>
-              <th>Coupons Applied</th>
               <th>Before Coupon</th>
               <th>Order Price</th>
             </tr>
@@ -598,10 +597,6 @@
               <td>Rs.<%= salesData[i].grandTotalcost %></td>
               <td><%= salesData[i].paymentType %></td>
               <td>Delivered</td>
-              <td>
-                <% if (salesData[i].length === 0) { %> None <% }
-                else { %> <%= salesData[i].couponOffers.couponCode %> <% } %>
-              </td>
               <td>
                 <% if (salesData[i].couponOffers) { %>
                 Rs.<%=Math.round(salesData[i].grandTotalcost / (1 -
